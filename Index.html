@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvolvNth | Beyond the First Order</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505; /* Deep, almost-black background */
+            color: #f3f4f6;
+            /* Subtle top-center radial gradient for a premium lighting effect */
+            background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
+        }
+        
+        /* Modern frosted glass effect for cards */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Sleek text gradients for headings */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #ffffff, #9ca3af);
+        }
+        
+        .accent-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <nav class="w-full px-6 py-5 flex justify-between items-center max-w-7xl mx-auto absolute top-0 left-0 right-0 z-50">
+        <div class="text-2xl font-bold tracking-tighter">
+            Evolv<span class="text-blue-500">Nth</span>
+        </div>
+        <div>
+            <a href="mailto:hello@evolvnth.com" class="text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition px-5 py-2.5 border border-gray-700 rounded-full hover:border-gray-400">
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex flex-col justify-center items-center px-4 pt-40 pb-20 text-center relative">
+        <div class="max-w-4xl mx-auto z-10">
+            <div class="inline-block mb-6 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-semibold tracking-widest uppercase">
+                Now Deploying
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+                Beyond the <br>
+                <span class="accent-gradient">First Order.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Mission-critical AI/ML solutions engineered for absolute certainty. We take complex data and drive uncompromising execution in high-stakes environments.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="mailto:hello@evolvnth.com" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
+                    Initiate Deployment
+                </a>
+                <a href="#architecture" class="px-8 py-4 glass-panel hover:bg-white/10 text-white font-semibold rounded-lg transition-all duration-300">
+                    Explore Architecture
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <section id="architecture" class="py-24 border-t border-gray-800/50 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-gradient">The Foundation of Excellence</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Built on a culture of unyielding integrity and operational discipline.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                    <div class="h-12 w-12 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Uncompromising Execution</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We don't just build models; we engineer outcomes. Our solutions are designed to deliver definitive results when failure is not an option.</p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                    <div class="h-12 w-12 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Nth-Order Intelligence</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Moving past surface-level problem solving. We anticipate cascading effects and apply lateral thinking to build strategic, multi-layered AI architectures.</p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                    <div class="h-12 w-12 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Secure & Sovereign</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Customer-centric integrity forms our baseline. We operate with the operational rigor and security required by the world's most demanding enterprises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-gray-800/50 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 EvolvNth. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
