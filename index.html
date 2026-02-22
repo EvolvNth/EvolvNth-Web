@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EvolvNth | Beyond the First Order</title>
-    <meta name="description" content="EvolvNth: High-performance Notion frameworks for strategic leaders. Moving beyond the first order to deliver Nth-order results through systematic innovation.">
+    <meta name="description" content="EvolvNth: Nth-order systems that solve life's most complex problems. We apply cascading thinking to transform your habits, finances, academics, and career with tools designed for compounding results.">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -30,14 +30,14 @@
             /* Subtle top-center radial gradient for a premium lighting effect */
             background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
         }
-        
+
         /* Modern frosted glass effect for cards */
         .glass-panel {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         /* Sleek text gradients for headings */
         .text-gradient {
             background-clip: text;
@@ -45,12 +45,22 @@
             -webkit-text-fill-color: transparent;
             background-image: linear-gradient(to right, #ffffff, #9ca3af);
         }
-        
+
         .accent-gradient {
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+        }
+
+        /* Modal transition */
+        #product-modal {
+            transition: opacity 0.3s ease;
+        }
+
+        /* Prevent body scroll when modal is open */
+        body.modal-open {
+            overflow: hidden;
         }
     </style>
 </head>
@@ -60,7 +70,10 @@
         <div class="text-2xl font-bold tracking-tighter">
             Evolv<span class="text-blue-500">Nth</span>
         </div>
-        <div>
+        <div class="flex items-center gap-4">
+            <a href="#products" class="text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition">
+                Products
+            </a>
             <a href="mailto:solutions@evolvnth.com" class="text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition px-5 py-2.5 border border-gray-700 rounded-full hover:border-gray-400">
                 Contact
             </a>
@@ -70,24 +83,24 @@
     <main class="flex-grow flex flex-col justify-center items-center px-4 pt-40 pb-20 text-center relative">
         <div class="max-w-4xl mx-auto z-10">
             <div class="inline-block mb-6 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-semibold tracking-widest uppercase">
-                Now Deploying
+                Systems That Compound
             </div>
-            
+
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
-                Beyond the <br>
+                Think Beyond the <br>
                 <span class="accent-gradient">First Order.</span>
             </h1>
-            
+
             <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                Mission-critical AI/ML solutions engineered for absolute certainty. We take complex data and drive uncompromising execution in high-stakes environments.
+                One habit triggers a chain reaction. One budget decision compounds into financial freedom. We engineer Nth-order systems &mdash; tools, frameworks, and solutions where every piece you build creates cascading wins across your entire life.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="mailto:solutions@evolvnth.com" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
-                    Initiate Deployment
+                <a href="#products" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
+                    Explore Products
                 </a>
                 <a href="#architecture" class="px-8 py-4 glass-panel hover:bg-white/10 text-white font-semibold rounded-lg transition-all duration-300">
-                    Explore Architecture
+                    Our Philosophy
                 </a>
             </div>
         </div>
@@ -96,45 +109,308 @@
     <section id="architecture" class="py-24 border-t border-gray-800/50 bg-[#0a0a0a]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4 text-gradient">The Foundation of Excellence</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto">Built on a culture of unyielding integrity and operational discipline.</p>
+                <h2 class="text-3xl font-bold mb-4 text-gradient">The Nth-Order Framework</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Everything we build follows three principles that turn simple actions into compounding, life-changing systems.</p>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
                     <div class="h-12 w-12 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded-lg flex items-center justify-center mb-6 text-xl">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Uncompromising Execution</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">We don't just build models; we engineer outcomes. Our solutions are designed to deliver definitive results when failure is not an option.</p>
+                    <h3 class="text-xl font-bold mb-3">Cascading Systems</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">One action triggers the next. Our systems connect habits, goals, and projects so that progress in one area automatically accelerates every other area of your life.</p>
                 </div>
 
                 <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
                     <div class="h-12 w-12 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded-lg flex items-center justify-center mb-6 text-xl">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Nth-Order Intelligence</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Moving past surface-level problem solving. We anticipate cascading effects and apply lateral thinking to build strategic, multi-layered AI architectures.</p>
+                    <h3 class="text-xl font-bold mb-3">Nth-Order Thinking</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Most tools solve surface-level problems. We design for second, third, and Nth-order effects &mdash; so tracking a habit today reshapes your health, productivity, and finances tomorrow.</p>
                 </div>
 
                 <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
                     <div class="h-12 w-12 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-lg flex items-center justify-center mb-6 text-xl">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Secure & Sovereign</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Customer-centric integrity forms our baseline. We operate with the operational rigor and security required by the world's most demanding enterprises.</p>
+                    <h3 class="text-xl font-bold mb-3">Built to Evolve</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Your life changes, and your tools should too. Every solution is modular, extensible, and designed to grow with you &mdash; from student to professional, side hustle to empire.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="products" class="py-24 border-t border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-gradient">Products</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Nth-order systems engineered for compounding results. Pick one to start, or build your complete life operating system.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <button onclick="openModal('habit-tracker')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer">
+                    <div class="text-4xl mb-4">&#127919;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Habit Tracker Pro</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Build lasting habits with streak tracking, daily logs, habit stacking, and 30-day challenges.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-medium">Notion &middot; 2 databases</span>
+                        <span class="text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
+                <button onclick="openModal('debt-snowball')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer">
+                    <div class="text-4xl mb-4">&#128176;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Debt Snowball Calculator</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Crush debt using the proven Snowball Method with payment tracking and net worth monitoring.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-medium">Notion &middot; 2 databases</span>
+                        <span class="text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
+                <button onclick="openModal('student-command')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer">
+                    <div class="text-4xl mb-4">&#127891;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Student Command Center</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Your academic hub with course tracking, assignment management, GPA calculator, and study techniques.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-medium">Notion &middot; 3 databases</span>
+                        <span class="text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
+                <button onclick="openModal('content-creator')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer">
+                    <div class="text-4xl mb-4">&#127916;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Content Creator Hub</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Multi-platform content management with pipeline tracking, ideas bank, and brand deals tracker.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-medium">Notion &middot; 3 databases</span>
+                        <span class="text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
+                <button onclick="openModal('job-hunt')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer">
+                    <div class="text-4xl mb-4">&#128188;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Job Hunt Dashboard</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Organized job search with application tracking, interview prep, networking CRM, and salary research.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-medium">Notion &middot; 2+ databases</span>
+                        <span class="text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
+                <button onclick="openModal('budget-tracker')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer">
+                    <div class="text-4xl mb-4">&#128202;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Budget & Expense Tracker</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Complete financial control with transaction logging, subscription audit, and 50/30/20 budgeting.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-medium">Notion &middot; 2 databases</span>
+                        <span class="text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
+                <button onclick="openModal('travel-planner')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer">
+                    <div class="text-4xl mb-4">&#9992;&#65039;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Travel Planner</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Plan trips with detailed itineraries, budgets, bucket list, and packing lists.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-medium">Notion &middot; 3 databases</span>
+                        <span class="text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
+                <button onclick="openModal('second-brain')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer">
+                    <div class="text-4xl mb-4">&#129504;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Second Brain / Knowledge Vault</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Personal knowledge management with capture inbox, reading list, and progressive summarization.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-medium">Notion &middot; 2 databases</span>
+                        <span class="text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
+                <button onclick="openModal('life-os')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer border border-blue-500/20">
+                    <div class="text-4xl mb-4">&#127968;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Life OS &mdash; Personal Command Center</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Comprehensive life dashboard with goals, projects, habits, journal, workout log, and CRM.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-blue-400 font-medium">Notion &middot; 7 databases &middot; Flagship</span>
+                        <span class="text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
+
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto glass-panel rounded-2xl p-8 md:p-10 z-10">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+
+            <!-- Dynamic Content -->
+            <div class="text-5xl mb-4" id="modal-emoji"></div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-2" id="modal-title"></h2>
+            <p class="text-gray-500 text-sm mb-6" id="modal-db-count"></p>
+
+            <!-- Description -->
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">What It Does</h3>
+                <p class="text-gray-300 leading-relaxed" id="modal-description"></p>
+            </div>
+
+            <!-- Value Proposition -->
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-2">Why It Works</h3>
+                <p class="text-gray-300 leading-relaxed" id="modal-value"></p>
+            </div>
+
+            <!-- Uniqueness Differentiator -->
+            <div class="mb-8">
+                <h3 class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-2">What Makes It Different</h3>
+                <p class="text-gray-300 leading-relaxed" id="modal-unique"></p>
+            </div>
+
+            <!-- CTA Button -->
+            <a id="modal-cta" href="#" class="inline-block w-full text-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
+                Get This Template
+            </a>
+        </div>
+    </div>
+
     <footer class="py-10 border-t border-gray-800/50 text-center text-gray-600 text-sm">
         <div class="flex justify-center gap-6 mb-4">
+            <a href="#products" class="hover:text-gray-400 transition">Products</a>
             <a href="/privacy.html" class="hover:text-gray-400 transition">Privacy Policy</a>
             <a href="/terms.html" class="hover:text-gray-400 transition">Terms of Use</a>
         </div>
         <p>&copy; 2026 EvolvNth. All rights reserved!</p>
     </footer>
+
+    <script>
+    const products = {
+        'habit-tracker': {
+            emoji: '\u{1F3AF}',
+            title: 'Habit Tracker Pro',
+            dbCount: 'Notion \u00B7 2 databases \u00B7 Science-backed framework',
+            description: 'Build lasting habits with streak tracking, daily logs, habit stacking, and 30-day challenges. Track your consistency visually, identify patterns, and use proven behavioral science techniques to make good habits stick and break bad ones.',
+            value: 'Most habit trackers just give you checkboxes. This template applies Nth-order thinking: your daily habits feed into weekly reviews, which surface patterns that reshape your routines. The result is a compounding system where each small win builds momentum across your health, productivity, and personal growth.',
+            unique: 'Built-in habit stacking framework based on James Clear\'s methodology. Pre-configured 30-day challenge templates. Visual streak tracking that makes consistency addictive. Two interconnected databases that link daily actions to long-term goals.',
+            link: '#'
+        },
+        'debt-snowball': {
+            emoji: '\u{1F4B0}',
+            title: 'Debt Snowball Calculator',
+            dbCount: 'Notion \u00B7 2 databases \u00B7 Proven payoff strategy',
+            description: 'Take control of your debt using the proven Snowball Method. Track every payment, allocate your budget strategically, and watch your net worth grow as each debt falls. Includes payment scheduling, interest tracking, and milestone celebrations.',
+            value: 'Debt feels overwhelming when you see it as one giant number. This template breaks it into a systematic, ordered attack plan. Paying off your smallest debt first creates psychological momentum \u2014 an Nth-order effect where each win fuels the motivation to tackle the next.',
+            unique: 'Automated snowball sequencing that recalculates as debts are paid off. Built-in net worth tracker so you see the full picture. Budget allocation views that show exactly where every dollar goes. Visual progress bars that make debt payoff genuinely motivating.',
+            link: '#'
+        },
+        'student-command': {
+            emoji: '\u{1F393}',
+            title: 'Student Command Center',
+            dbCount: 'Notion \u00B7 3 databases \u00B7 Complete academic hub',
+            description: 'Your all-in-one academic headquarters. Track courses, manage assignments with deadlines, calculate your GPA in real time, and access proven study techniques. Everything a student needs in one organized workspace.',
+            value: 'Academic success isn\'t just about studying harder \u2014 it\'s about systematic organization. When your assignments, deadlines, and study sessions are interconnected, you stop missing things. That reduced stress cascades into better focus, better grades, and more free time.',
+            unique: 'Real-time GPA calculator that updates as you log grades. Built-in study technique library with Pomodoro, spaced repetition, and active recall methods. Three databases linking courses to assignments to study sessions. Deadline views that prevent last-minute panic.',
+            link: '#'
+        },
+        'content-creator': {
+            emoji: '\u{1F3AC}',
+            title: 'Content Creator Hub',
+            dbCount: 'Notion \u00B7 3 databases \u00B7 Multi-platform management',
+            description: 'Manage your entire content operation across platforms. Track your content pipeline from idea to published, maintain an ideas bank that never runs dry, manage brand deals and sponsorships, and monitor analytics in one place.',
+            value: 'Content creation fails when ideas live in your head and workflows live in scattered tools. This template creates a single source of truth where every idea flows through a pipeline, brand deals are tracked professionally, and analytics inform your next move. The Nth-order effect: consistent publishing builds audience, which attracts deals, which funds better content.',
+            unique: 'Multi-platform pipeline tracking for YouTube, TikTok, Instagram, blog, and podcast. Ideas bank with tagging and priority scoring. Brand deals tracker with payment status and deliverables. Three interconnected databases that turn content chaos into a professional operation.',
+            link: '#'
+        },
+        'job-hunt': {
+            emoji: '\u{1F4BC}',
+            title: 'Job Hunt Dashboard',
+            dbCount: 'Notion \u00B7 2+ databases \u00B7 Strategic job search',
+            description: 'Transform your job search from chaotic applications into a strategic campaign. Track every application, prepare for interviews with structured prep sheets, build your networking CRM, and research salary ranges \u2014 all in one dashboard.',
+            value: 'Job hunting is stressful because it feels uncontrollable. This template gives you control. When applications are tracked, follow-ups are scheduled, and interview prep is systematic, you perform better at every stage. The Nth-order effect: better organization leads to better interviews, stronger offers, and higher starting salaries.',
+            unique: 'Application status pipeline with visual tracking. Interview prep templates with STAR method frameworks. Built-in networking CRM to track contacts and follow-ups. Salary research tracker to negotiate with confidence.',
+            link: '#'
+        },
+        'budget-tracker': {
+            emoji: '\u{1F4CA}',
+            title: 'Budget & Expense Tracker',
+            dbCount: 'Notion \u00B7 2 databases \u00B7 Complete financial control',
+            description: 'Take complete control of your money with transaction logging, subscription auditing, 50/30/20 budgeting, and savings goal tracking. See exactly where your money goes and make every dollar intentional.',
+            value: 'Financial freedom starts with visibility. Most people have no idea where 30% of their income goes. This template surfaces that invisible spending and turns it into conscious choices. The Nth-order effect: awareness drives better spending, which accelerates savings, which unlocks investment opportunities.',
+            unique: 'Subscription audit view that surfaces forgotten recurring charges. Pre-built 50/30/20 budget framework with automatic category allocation. Savings goal tracker with visual progress. Two databases connecting transactions to budget categories for instant insights.',
+            link: '#'
+        },
+        'travel-planner': {
+            emoji: '\u2708\uFE0F',
+            title: 'Travel Planner',
+            dbCount: 'Notion \u00B7 3 databases \u00B7 Trip planning made effortless',
+            description: 'Plan trips with detailed day-by-day itineraries, travel budgets, a lifetime bucket list, and reusable packing lists. From weekend getaways to international adventures, organize every detail in one beautiful workspace.',
+            value: 'Great trips don\'t happen by accident \u2014 they\'re designed. When your itinerary, budget, and packing are all connected, you travel lighter, spend smarter, and experience more. The Nth-order effect: well-planned trips create better memories, which fuel your motivation to explore more of the world.',
+            unique: 'Day-by-day itinerary builder with time blocks and location links. Budget tracker that monitors spending by category. Lifetime bucket list with priority ranking. Reusable packing list templates by trip type.',
+            link: '#'
+        },
+        'second-brain': {
+            emoji: '\u{1F9E0}',
+            title: 'Second Brain / Knowledge Vault',
+            dbCount: 'Notion \u00B7 2 databases \u00B7 Personal knowledge management',
+            description: 'Build your personal knowledge management system. Capture ideas instantly, maintain a curated reading list, and use progressive summarization to turn raw information into actionable wisdom.',
+            value: 'Information is only valuable when you can find it and use it. This template applies the Second Brain methodology so nothing falls through the cracks. The Nth-order effect: better knowledge capture leads to better connections between ideas, which sparks creativity and better decision-making across every area of your life.',
+            unique: 'Quick-capture inbox that eliminates friction. Progressive summarization workflow for distilling key insights. Reading list with status tracking and key takeaway fields. Two interconnected databases that surface relevant notes exactly when you need them.',
+            link: '#'
+        },
+        'life-os': {
+            emoji: '\u{1F3E0}',
+            title: 'Life OS \u2014 Personal Command Center',
+            dbCount: 'Notion \u00B7 7 databases \u00B7 Flagship',
+            description: 'The ultimate personal operating system. Manage your goals, projects, habits, journal, workout log, and personal CRM in one interconnected dashboard. This is where all your systems come together.',
+            value: 'This is Nth-order thinking made tangible. When your goals connect to projects, projects connect to habits, and habits connect to daily actions, everything compounds. Your workout log informs your energy levels. Your journal surfaces patterns. Your CRM keeps relationships strong. Every system amplifies every other system.',
+            unique: 'Seven interconnected databases that form a complete life operating system. Goal-to-action linking that ensures daily tasks serve long-term vision. Built-in journal with weekly, monthly, and quarterly review prompts. Workout log, reading tracker, and personal CRM all feeding into one unified dashboard. The flagship EvolvNth template.',
+            link: '#'
+        }
+    };
+
+    function openModal(id) {
+        const product = products[id];
+        if (!product) return;
+
+        document.getElementById('modal-emoji').textContent = product.emoji;
+        document.getElementById('modal-title').textContent = product.title;
+        document.getElementById('modal-db-count').textContent = product.dbCount;
+        document.getElementById('modal-description').textContent = product.description;
+        document.getElementById('modal-value').textContent = product.value;
+        document.getElementById('modal-unique').textContent = product.unique;
+        document.getElementById('modal-cta').href = product.link;
+
+        const modal = document.getElementById('product-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('product-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.classList.remove('modal-open');
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+    </script>
 
 </body>
 </html>
