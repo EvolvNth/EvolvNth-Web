@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Debt Snowball Calculator Template | Debt Payoff Tracker | EvolvNth</title>
+    <meta name="description" content="Pay off debt faster with our Notion debt snowball calculator template. Features snowball sequencing, payment tracking, net worth monitoring, and milestone celebrations. Based on Dave Ramsey's proven method.">
+    <link rel="canonical" href="https://evolvnth.com/templates/debt-snowball-calculator">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://evolvnth.com/templates/debt-snowball-calculator">
+    <meta property="og:title" content="Notion Debt Snowball Calculator Template | Debt Payoff Tracker | EvolvNth">
+    <meta property="og:description" content="Pay off debt faster with our Notion debt snowball calculator template. Features snowball sequencing, payment tracking, net worth monitoring, and milestone celebrations. Based on Dave Ramsey's proven method.">
+    <meta property="og:image" content="https://evolvnth.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="EvolvNth - Debt Snowball Calculator Notion Template">
+    <meta property="og:site_name" content="EvolvNth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notion Debt Snowball Calculator Template | Debt Payoff Tracker | EvolvNth">
+    <meta name="twitter:description" content="Pay off debt faster with our Notion debt snowball calculator template. Features snowball sequencing, payment tracking, net worth monitoring, and milestone celebrations. Based on Dave Ramsey's proven method.">
+    <meta name="twitter:image" content="https://evolvnth.com/og-image.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Debt Snowball Calculator - Notion Template",
+        "url": "https://evolvnth.com/templates/debt-snowball-calculator",
+        "description": "Pay off debt faster with our Notion debt snowball calculator template. Features snowball sequencing, payment tracking, net worth monitoring, and milestone celebrations. Based on Dave Ramsey's proven method.",
+        "brand": {
+            "@type": "Brand",
+            "name": "EvolvNth"
+        },
+        "category": "Notion Templates > Finance"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #ffffff, #9ca3af);
+        }
+
+        .accent-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        .feature-list li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+        }
+        .feature-list strong {
+            color: #f9fafb;
+            font-weight: 600;
+        }
+
+        .mode-card {
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .mode-card.beginner {
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.08);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+        .mode-card h4 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .mode-card p {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            line-height: 1.5;
+        }
+
+        .diff-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .diff-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        .diff-list li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+        }
+        .diff-list strong {
+            color: #f9fafb;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Nav -->
+    <nav class="w-full px-6 py-5 flex justify-between items-center max-w-7xl mx-auto absolute top-0 left-0 right-0 z-50">
+        <a href="/" class="text-2xl font-bold tracking-tighter">
+            Evolv<span class="text-blue-500">Nth</span>
+        </a>
+        <div class="flex items-center gap-4">
+            <a href="/#products" class="text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition">
+                All Templates
+            </a>
+            <a href="mailto:solutions@evolvnth.com" class="text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition px-5 py-2.5 border border-gray-700 rounded-full hover:border-gray-400">
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+
+        <!-- Hero -->
+        <section class="px-6 pt-32 pb-16">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-6xl mb-6">&#128176;</div>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight text-gradient">
+                    Debt Snowball Calculator
+                </h1>
+                <p class="text-gray-500 text-sm mb-6">Notion &middot; 2 databases &middot; Proven payoff strategy</p>
+                <blockquote class="text-gray-200 text-lg italic leading-relaxed border-l-2 border-blue-500 pl-4">
+                    Your debt has a plan for your money. It&rsquo;s time you had a better one.
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Built For -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">Built For</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Anyone carrying multiple debts &mdash; credit cards, student loans, car payments, medical bills. Whether you owe $5,000 or $150,000, if looking at your total balance makes your stomach drop, this system was designed for exactly that feeling.
+                </p>
+            </div>
+        </section>
+
+        <!-- The Problem -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-3">The Problem</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    You&rsquo;re making minimum payments on everything and watching balances barely move. The total number feels insurmountable, so you avoid thinking about it. Meanwhile, interest compounds silently, and every month you lose money to a system designed to keep you paying forever.
+                </p>
+            </div>
+        </section>
+
+        <!-- What's Inside -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-3">What&rsquo;s Inside</h2>
+                <ul class="feature-list">
+                    <li><strong>Debt Inventory Database</strong> &mdash; catalog every debt with balance, interest rate, minimum payment, and payoff priority</li>
+                    <li><strong>Snowball Sequencing</strong> &mdash; automatically orders debts from smallest to largest balance for maximum psychological momentum</li>
+                    <li><strong>Payment Tracker</strong> &mdash; log every payment and watch balances shrink in real time</li>
+                    <li><strong>Net Worth Monitor</strong> &mdash; see your total financial picture improve as debts fall off</li>
+                    <li><strong>Budget Allocation View</strong> &mdash; visualize exactly where every dollar goes each month</li>
+                    <li><strong>Milestone Celebrations</strong> &mdash; built-in progress markers that keep motivation high through the long payoff journey</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Two Ways to Use It -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">Two Ways to Use It</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="mode-card beginner">
+                        <h4 class="text-blue-400">&#128994; Beginner Mode</h4>
+                        <p>List your debts, follow the guided snowball order, and log payments. The template tells you exactly which debt to attack next and how much to pay &mdash; zero guesswork.</p>
+                    </div>
+                    <div class="mode-card advanced">
+                        <h4 class="text-purple-400">&#128311; Advanced Mode</h4>
+                        <p>Compare snowball vs. avalanche strategies, model different payment scenarios, track interest saved, and build a complete financial timeline toward debt-free status.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Science Behind It -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-3">The Science Behind It</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    This template implements <strong class="text-gray-100">Dave Ramsey&rsquo;s Debt Snowball Method</strong>, which prioritizes paying off the smallest balance first regardless of interest rate. Critics call it mathematically suboptimal &mdash; but research from Northwestern University&rsquo;s Kellogg School shows that <strong class="text-gray-100">people who use the snowball method are 14% more likely to eliminate their debt entirely</strong>.
+                </p>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Why? Because debt payoff is a <strong class="text-gray-100">behavioral problem</strong>, not a math problem. The quick wins from eliminating small debts trigger <strong class="text-gray-100">dopamine release</strong> and create what psychologists call a <strong class="text-gray-100">progress principle</strong> effect &mdash; visible progress is the single strongest motivator for sustained effort. This template is engineered around that science.
+                </p>
+                <p class="text-gray-300 leading-relaxed">
+                    That&rsquo;s <strong class="text-gray-100">Nth-order thinking</strong> applied to personal finance: each eliminated debt (first order) frees up cash flow (second order), which accelerates the next payoff (third order), which eventually unlocks investing and wealth-building. One payment at a time, the entire financial trajectory changes.
+                </p>
+            </div>
+        </section>
+
+        <!-- Why Others Fall Short -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">Why Others Fall Short</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Spreadsheets can do debt math. But they can&rsquo;t keep you motivated at month seven when the initial excitement has faded.
+                </p>
+                <ul class="diff-list mb-4">
+                    <li><strong>Debt payoff apps</strong> (Undebt.it, Debt Payoff Planner) give you a calculator with no workspace context</li>
+                    <li><strong>Spreadsheet templates</strong> require manual formulas and offer no visual momentum</li>
+                    <li><strong>This template</strong> combines the mathematical plan with the psychological system &mdash; visual progress, milestone rewards, net worth tracking, and budget allocation in one workspace that makes you <em>want</em> to make payments</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <a href="#" class="block w-full text-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300 text-lg">
+                    Get This Template
+                </a>
+            </div>
+        </section>
+
+        <!-- Related Templates -->
+        <section class="px-6 py-24 border-t border-gray-800/50">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8 text-gradient">Related Templates</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="/templates/habit-tracker" class="glass-panel p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="text-3xl mb-3">&#127919;</div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-blue-400 transition-colors">Habit Tracker Pro</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Build lasting habits with streak tracking, daily logs, and 30-day challenges.</p>
+                    </a>
+                    <a href="/templates/budget-expense-tracker" class="glass-panel p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="text-3xl mb-3">&#128202;</div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-blue-400 transition-colors">Budget &amp; Expense Tracker</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Complete financial control with transaction logging and 50/30/20 budgeting.</p>
+                    </a>
+                    <a href="/templates/life-os" class="glass-panel p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="text-3xl mb-3">&#127968;</div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-blue-400 transition-colors">Life OS</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Comprehensive life dashboard with goals, projects, habits, journal, and more.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-gray-800/50 text-center text-gray-600 text-sm">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="/#products" class="hover:text-gray-400 transition">Products</a>
+            <a href="/privacy.html" class="hover:text-gray-400 transition">Privacy Policy</a>
+            <a href="/terms.html" class="hover:text-gray-400 transition">Terms of Use</a>
+        </div>
+        <p>&copy; 2026 EvolvNth. All rights reserved!</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Habit Tracker Template | Streak Tracking &amp; Habit Stacking | EvolvNth</title>
+    <meta name="description" content="Build lasting habits with our premium Notion habit tracker template. Features streak tracking, habit stacking based on Atomic Habits, 30-day challenges, and pattern analysis. Science-backed system for compounding results.">
+    <link rel="canonical" href="https://evolvnth.com/templates/habit-tracker">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Notion Habit Tracker Template | Streak Tracking &amp; Habit Stacking | EvolvNth">
+    <meta property="og:description" content="Build lasting habits with our premium Notion habit tracker template. Features streak tracking, habit stacking based on Atomic Habits, 30-day challenges, and pattern analysis. Science-backed system for compounding results.">
+    <meta property="og:url" content="https://evolvnth.com/templates/habit-tracker">
+    <meta property="og:image" content="https://evolvnth.com/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EvolvNth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notion Habit Tracker Template | Streak Tracking &amp; Habit Stacking | EvolvNth">
+    <meta name="twitter:description" content="Build lasting habits with our premium Notion habit tracker template. Features streak tracking, habit stacking based on Atomic Habits, 30-day challenges, and pattern analysis. Science-backed system for compounding results.">
+    <meta name="twitter:image" content="https://evolvnth.com/og-image.png">
+
+    <!-- JSON-LD Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Habit Tracker Pro",
+        "description": "Build lasting habits with our premium Notion habit tracker template. Features streak tracking, habit stacking based on Atomic Habits, 30-day challenges, and pattern analysis. Science-backed system for compounding results.",
+        "url": "https://evolvnth.com/templates/habit-tracker",
+        "brand": {
+            "@type": "Brand",
+            "name": "EvolvNth"
+        },
+        "category": "Notion Templates > Productivity"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif']
+                }
+            }
+        }
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+
+        .feature-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-list li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .mode-card {
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mode-card.beginner {
+            background: rgba(59, 130, 246, 0.06);
+            border-color: rgba(59, 130, 246, 0.15);
+        }
+
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.06);
+            border-color: rgba(139, 92, 246, 0.15);
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
+        }
+
+        .related-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        .related-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Nav Bar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px);">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold text-gradient tracking-tight">EvolvNth</a>
+            <div class="flex items-center gap-6 text-sm text-gray-400">
+                <a href="/#products" class="hover:text-white transition-colors">All Templates</a>
+                <a href="mailto:evolvnth@gmail.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-7xl mb-6">&#x1F3AF;</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Habit Tracker Pro</h1>
+            <p class="text-gray-400 text-lg mb-8">Notion &middot; 2 databases &middot; Science-backed framework</p>
+            <blockquote class="border-l-4 border-blue-500 pl-6 text-xl italic text-gray-300 text-left max-w-xl mx-auto">
+                You don't lack willpower. You lack a system that makes consistency automatic.
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Built For -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-amber-400 mb-6">Built For</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Students, professionals, and anyone who has downloaded a habit app, used it for two weeks, then quietly deleted it. If you've ever set a goal on January 1st and abandoned it by February, this was built for you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-400 mb-6">The Problem</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Habit apps give you checkboxes and streaks &mdash; then leave you alone with no insight into why you keep failing on Wednesdays, why your morning routine collapses on weekends, or which habits actually move the needle. You're tracking activity without understanding behavior.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-blue-400 mb-6">What's Inside</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <ul class="feature-list list-none text-gray-300 leading-relaxed">
+                    <li><strong class="text-white">Habit Definition Database</strong> &mdash; define each habit with frequency, category, difficulty level, and your personal "why" so every habit has purpose</li>
+                    <li><strong class="text-white">Daily Tracking Log</strong> &mdash; log completions with emoji Day Scores that make your consistency visible at a glance</li>
+                    <li><strong class="text-white">Streak Tracking</strong> &mdash; automated streak counters that reward momentum and surface your longest runs</li>
+                    <li><strong class="text-white">Habit Stacking Framework</strong> &mdash; link habits in sequences based on James Clear's Atomic Habits methodology so one cue triggers the next</li>
+                    <li><strong class="text-white">30-Day Challenge Templates</strong> &mdash; pre-built challenges with daily prompts to kickstart new behaviors</li>
+                    <li><strong class="text-white">Pattern Analysis Views</strong> &mdash; weekly and monthly views that reveal which days, times, and conditions produce your best results</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Ways to Use It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Two Ways to Use It</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="mode-card beginner">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-4">Beginner Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Start with 3 keystone habits. Follow the guided daily check-in routine. The template walks you through exactly what to track and when &mdash; no decisions required.
+                    </p>
+                </div>
+                <div class="mode-card advanced">
+                    <h3 class="text-lg font-semibold text-purple-400 mb-4">Advanced Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Unlock habit stacking chains, cross-reference completion rates against energy levels, build custom 30-day challenges, and use the monthly review system to optimize your routine like a behavioral scientist.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Science Behind It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-purple-400 mb-6">The Science Behind It</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Built on the Habit Loop (cue &rarr; routine &rarr; reward) from Charles Duhigg's research and the identity-based habit framework from James Clear's <em>Atomic Habits</em>. Uses implementation intentions &mdash; the psychological technique of binding a behavior to a specific cue and context, which studies show increases follow-through by over 40%.
+                    </p>
+                    <p>
+                        The visual streak system exploits loss aversion: once you've built a 15-day streak, the psychological cost of breaking it becomes a more powerful motivator than the original goal.
+                    </p>
+                    <p>
+                        This is Nth-order design in practice: a daily check-in (first order) builds consistency (second order), which reshapes your identity as someone who follows through (third order), which transforms your discipline across health, work, and relationships.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Others Fall Short -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-emerald-400 mb-6">Why Others Fall Short</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Generic habit apps track completion. This template tracks <strong class="text-white">behavior patterns</strong>. Most tools can tell you that you missed Tuesday &mdash; ours shows you <em>why</em> Tuesdays fail and what to change.
+                    </p>
+                    <ul class="feature-list list-none">
+                        <li>Competing apps (Habitica, Streaks, HabitBull) are mobile-first checklists with no analytical depth</li>
+                        <li>Generic Notion templates give you a table and call it a tracker &mdash; no stacking framework, no challenges, no pattern insights</li>
+                        <li>Built with Nth-order design: other trackers help you build a habit. This one is engineered so building habits cascades into transforming your identity, productivity, and entire life trajectory</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Button -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <a href="#" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg py-4 rounded-xl transition-colors cta-glow">
+                Get This Template
+            </a>
+        </div>
+    </section>
+
+    <!-- Related Templates -->
+    <section class="px-6 py-24">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Explore More Templates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="/templates/life-os" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F30D;</div>
+                    <h3 class="text-white font-semibold mb-2">Life OS Dashboard</h3>
+                    <p class="text-gray-400 text-sm">Your entire life in one command center. Goals, projects, habits, and routines unified in a single Notion workspace.</p>
+                </a>
+                <a href="/templates/budget-tracker" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F4B0;</div>
+                    <h3 class="text-white font-semibold mb-2">Budget Tracker</h3>
+                    <p class="text-gray-400 text-sm">Take control of your money with automated tracking, spending insights, and savings goals that compound over time.</p>
+                </a>
+                <a href="/templates/student-command-center" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F393;</div>
+                    <h3 class="text-white font-semibold mb-2">Student Command Center</h3>
+                    <p class="text-gray-400 text-sm">Manage classes, assignments, exams, and GPA in one organized workspace designed for academic success.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 px-6 py-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-6">
+                <a href="/#products" class="hover:text-white transition-colors">Products</a>
+                <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+            </div>
+            <p>&copy; 2026 EvolvNth. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

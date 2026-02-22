@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Student Template | Assignment Tracker & GPA Calculator | EvolvNth</title>
+    <meta name="description" content="Ace your academics with our Notion student command center template. Features course tracking, assignment management, real-time GPA calculator, and proven study techniques like spaced repetition and active recall.">
+    <link rel="canonical" href="https://evolvnth.com/templates/student-command-center">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://evolvnth.com/templates/student-command-center">
+    <meta property="og:title" content="Notion Student Template | Assignment Tracker & GPA Calculator | EvolvNth">
+    <meta property="og:description" content="Ace your academics with our Notion student command center template. Features course tracking, assignment management, real-time GPA calculator, and proven study techniques like spaced repetition and active recall.">
+    <meta property="og:image" content="https://evolvnth.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Student Command Center - Notion Template by EvolvNth">
+    <meta property="og:site_name" content="EvolvNth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notion Student Template | Assignment Tracker & GPA Calculator | EvolvNth">
+    <meta name="twitter:description" content="Ace your academics with our Notion student command center template. Features course tracking, assignment management, real-time GPA calculator, and proven study techniques like spaced repetition and active recall.">
+    <meta name="twitter:image" content="https://evolvnth.com/og-image.png">
+
+    <!-- JSON-LD Product -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Student Command Center - Notion Template",
+        "description": "Ace your academics with our Notion student command center template. Features course tracking, assignment management, real-time GPA calculator, and proven study techniques like spaced repetition and active recall.",
+        "url": "https://evolvnth.com/templates/student-command-center",
+        "image": "https://evolvnth.com/og-image.png",
+        "brand": {
+            "@type": "Brand",
+            "name": "EvolvNth"
+        },
+        "category": "Notion Templates > Education"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #ffffff, #9ca3af);
+        }
+
+        .accent-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .content-section ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        .content-section ul li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+        }
+        .content-section strong {
+            color: #f9fafb;
+            font-weight: 600;
+        }
+
+        .mode-card {
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .mode-card.beginner {
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.08);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+        .mode-card h4 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .mode-card p {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Nav -->
+    <nav class="w-full px-6 py-5 flex justify-between items-center max-w-7xl mx-auto absolute top-0 left-0 right-0 z-50">
+        <a href="/" class="text-2xl font-bold tracking-tighter">
+            Evolv<span class="text-blue-500">Nth</span>
+        </a>
+        <div class="flex items-center gap-4">
+            <a href="/#products" class="text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition">
+                All Templates
+            </a>
+            <a href="mailto:solutions@evolvnth.com" class="text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition px-5 py-2.5 border border-gray-700 rounded-full hover:border-gray-400">
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+
+        <!-- Hero -->
+        <section class="pt-40 pb-16 px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-6xl mb-6">&#127891;</div>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight text-gradient">
+                    Student Command Center
+                </h1>
+                <p class="text-gray-500 text-sm font-medium mb-6">Notion &middot; 3 databases &middot; Complete academic hub</p>
+                <p class="text-gray-200 text-lg italic leading-relaxed border-l-2 border-blue-500 pl-4">
+                    The students who get the best grades aren&rsquo;t the smartest. They&rsquo;re the most organized.
+                </p>
+            </div>
+        </section>
+
+        <!-- Built For -->
+        <section class="py-12 px-6">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">Built For</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    College and university students at any level &mdash; freshmen overwhelmed by the jump from high school, upperclassmen juggling heavy course loads, and graduate students managing research alongside coursework. Also built for competitive students who refuse to leave their GPA to chance.
+                </p>
+            </div>
+        </section>
+
+        <!-- The Problem -->
+        <section class="py-12 px-6">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-3">The Problem</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Your assignments live in five different apps. You&rsquo;ve missed deadlines because you forgot to check a syllabus. Your GPA is a mystery until grades post. And every semester, you swear you&rsquo;ll be more organized &mdash; then fall back into the same scramble by week three.
+                </p>
+            </div>
+        </section>
+
+        <!-- What's Inside -->
+        <section class="py-12 px-6">
+            <div class="max-w-3xl mx-auto content-section">
+                <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-3">What&rsquo;s Inside</h3>
+                <ul>
+                    <li><strong>Course Database</strong> &mdash; track every course with professor, schedule, credits, grade, and linked assignments</li>
+                    <li><strong>Assignment Manager</strong> &mdash; deadlines, priority levels, completion status, and submission tracking across all courses</li>
+                    <li><strong>Exam Tracker</strong> &mdash; exam dates, study plans, and grade logging in one view</li>
+                    <li><strong>Real-Time GPA Calculator</strong> &mdash; updates automatically as you log grades so you always know where you stand</li>
+                    <li><strong>Study Technique Library</strong> &mdash; built-in guides for Pomodoro, spaced repetition, active recall, and Feynman technique</li>
+                    <li><strong>Deadline Calendar View</strong> &mdash; see every upcoming due date across all courses in one visual timeline</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Two Ways to Use It -->
+        <section class="py-12 px-6">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">Two Ways to Use It</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="mode-card beginner">
+                        <h4 class="text-blue-400">&#128994; Beginner Mode</h4>
+                        <p>Add your courses, enter assignment deadlines, and follow the weekly review checklist. The template organizes everything and alerts you to what&rsquo;s due next &mdash; just keep it updated.</p>
+                    </div>
+                    <div class="mode-card advanced">
+                        <h4 class="text-purple-400">&#128311; Advanced Mode</h4>
+                        <p>Track GPA targets by course, implement spaced repetition schedules, analyze time-per-assignment patterns, and run end-of-semester performance reviews to optimize your approach each term.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Science Behind It -->
+        <section class="py-12 px-6">
+            <div class="max-w-3xl mx-auto content-section">
+                <h3 class="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-3">The Science Behind It</h3>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    This system is built on research showing that <strong>external cognitive systems</strong> &mdash; structured places to offload information &mdash; dramatically reduce <strong>cognitive load</strong> and free up working memory for actual learning. The built-in study techniques draw from decades of learning science:
+                </p>
+                <ul>
+                    <li><strong>Spaced Repetition</strong> (Ebbinghaus, 1885) &mdash; reviewing material at increasing intervals improves long-term retention by up to 200%</li>
+                    <li><strong>Active Recall</strong> (Roediger &amp; Karpicke, 2006) &mdash; testing yourself is 2&ndash;3x more effective than re-reading</li>
+                    <li><strong>Pomodoro Technique</strong> (Cirillo) &mdash; focused 25-minute blocks prevent burnout and maintain deep concentration</li>
+                </ul>
+                <p class="text-gray-300 leading-relaxed mt-4">
+                    This is <strong>Nth-order thinking</strong> applied to academics: getting organized (first order) reduces anxiety (second order), which frees cognitive bandwidth for deeper learning (third order), which improves grades, which opens doors to better opportunities for the rest of your career.
+                </p>
+            </div>
+        </section>
+
+        <!-- Why Others Fall Short -->
+        <section class="py-12 px-6">
+            <div class="max-w-3xl mx-auto content-section">
+                <h3 class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">Why Others Fall Short</h3>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Your university&rsquo;s LMS shows deadlines for one class at a time. Your calendar shows dates but not priorities. Neither tracks your GPA or teaches you how to study.
+                </p>
+                <ul>
+                    <li><strong>University LMS systems</strong> (Canvas, Blackboard) are built for professors, not students</li>
+                    <li><strong>Planner apps</strong> (Todoist, Google Calendar) track dates but don&rsquo;t understand academic context</li>
+                    <li><strong>This template</strong> unifies courses, assignments, exams, GPA tracking, and proven study methods into one command center that makes academic success systematic, not accidental</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 px-6">
+            <div class="max-w-3xl mx-auto">
+                <a href="#" class="block w-full text-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300 text-lg">
+                    Get This Template
+                </a>
+            </div>
+        </section>
+
+        <!-- Related Templates -->
+        <section class="py-24 px-6 border-t border-gray-800/50">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8 text-gradient">Related Templates</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+
+                    <a href="/templates/habit-tracker" class="glass-panel p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="text-3xl mb-3">&#127919;</div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-blue-400 transition-colors">Habit Tracker Pro</h3>
+                        <p class="text-gray-500 text-xs font-medium">Notion &middot; 2 databases</p>
+                    </a>
+
+                    <a href="/templates/job-hunt-dashboard" class="glass-panel p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="text-3xl mb-3">&#128188;</div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-blue-400 transition-colors">Job Hunt Dashboard</h3>
+                        <p class="text-gray-500 text-xs font-medium">Notion &middot; 2+ databases</p>
+                    </a>
+
+                    <a href="/templates/life-os" class="glass-panel p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="text-3xl mb-3">&#127968;</div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-blue-400 transition-colors">Life OS</h3>
+                        <p class="text-gray-500 text-xs font-medium">Notion &middot; 7 databases &middot; Flagship</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-gray-800/50 text-center text-gray-600 text-sm">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="/#products" class="hover:text-gray-400 transition">Products</a>
+            <a href="/privacy.html" class="hover:text-gray-400 transition">Privacy Policy</a>
+            <a href="/terms.html" class="hover:text-gray-400 transition">Terms of Use</a>
+        </div>
+        <p>&copy; 2026 EvolvNth. All rights reserved!</p>
+    </footer>
+
+</body>
+</html>

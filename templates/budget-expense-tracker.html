@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Budget Tracker Template | Expense Tracking & 50/30/20 Budgeting | EvolvNth</title>
+    <meta name="description" content="Take control of your finances with our Notion budget and expense tracker template. Features transaction logging, subscription audit, 50/30/20 budget framework, savings goals, and monthly financial reviews.">
+    <link rel="canonical" href="https://evolvnth.com/templates/budget-expense-tracker">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://evolvnth.com/templates/budget-expense-tracker">
+    <meta property="og:title" content="Notion Budget Tracker Template | Expense Tracking & 50/30/20 Budgeting | EvolvNth">
+    <meta property="og:description" content="Take control of your finances with our Notion budget and expense tracker template. Features transaction logging, subscription audit, 50/30/20 budget framework, savings goals, and monthly financial reviews.">
+    <meta property="og:image" content="https://evolvnth.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="EvolvNth - Budget & Expense Tracker Notion Template">
+    <meta property="og:site_name" content="EvolvNth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notion Budget Tracker Template | Expense Tracking & 50/30/20 Budgeting | EvolvNth">
+    <meta name="twitter:description" content="Take control of your finances with our Notion budget and expense tracker template. Features transaction logging, subscription audit, 50/30/20 budget framework, savings goals, and monthly financial reviews.">
+    <meta name="twitter:image" content="https://evolvnth.com/og-image.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Budget & Expense Tracker - Notion Template",
+        "url": "https://evolvnth.com/templates/budget-expense-tracker",
+        "description": "Take control of your finances with our Notion budget and expense tracker template. Features transaction logging, subscription audit, 50/30/20 budget framework, savings goals, and monthly financial reviews.",
+        "brand": {
+            "@type": "Brand",
+            "name": "EvolvNth"
+        },
+        "category": "Notion Templates > Finance"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #ffffff, #9ca3af);
+        }
+
+        .accent-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        .feature-list li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+        }
+        .feature-list strong {
+            color: #f9fafb;
+            font-weight: 600;
+        }
+
+        .mode-card {
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .mode-card.beginner {
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.08);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+        .mode-card h4 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .mode-card p {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            line-height: 1.5;
+        }
+
+        .diff-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .diff-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        .diff-list li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+        }
+        .diff-list strong {
+            color: #f9fafb;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Nav -->
+    <nav class="w-full px-6 py-5 flex justify-between items-center max-w-7xl mx-auto absolute top-0 left-0 right-0 z-50">
+        <a href="/" class="text-2xl font-bold tracking-tighter">
+            Evolv<span class="text-blue-500">Nth</span>
+        </a>
+        <div class="flex items-center gap-4">
+            <a href="/#products" class="text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition">
+                All Templates
+            </a>
+            <a href="mailto:solutions@evolvnth.com" class="text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition px-5 py-2.5 border border-gray-700 rounded-full hover:border-gray-400">
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+
+        <!-- Hero -->
+        <section class="px-6 pt-32 pb-16">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-6xl mb-6">&#128202;</div>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight text-gradient">
+                    Budget &amp; Expense Tracker
+                </h1>
+                <p class="text-gray-500 text-sm mb-6">Notion &middot; 2 databases &middot; Complete financial control</p>
+                <blockquote class="text-gray-200 text-lg italic leading-relaxed border-l-2 border-blue-500 pl-4">
+                    Quick: where does 30% of your income go each month? If you can&rsquo;t answer that in 5 seconds, you need this template.
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Built For -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">Built For</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Young professionals, recent graduates, freelancers, and anyone who earns a decent income but can&rsquo;t figure out why there&rsquo;s nothing left at the end of the month. If you&rsquo;ve ever checked your bank balance and thought &ldquo;where did it all go?&rdquo; &mdash; this is for you.
+                </p>
+            </div>
+        </section>
+
+        <!-- The Problem -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-3">The Problem</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    You have invisible money leaks. Forgotten subscriptions you signed up for during a free trial. Impulse purchases that feel small but add up to hundreds. A vague sense that you should be saving more but no clarity on what to cut. Your money disappears because you can&rsquo;t see where it goes.
+                </p>
+            </div>
+        </section>
+
+        <!-- What's Inside -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-3">What&rsquo;s Inside</h2>
+                <ul class="feature-list">
+                    <li><strong>Transaction Database</strong> &mdash; log every expense with category, amount, date, and payment method for total financial visibility</li>
+                    <li><strong>Subscription Audit View</strong> &mdash; surface every recurring charge in one list so forgotten subscriptions can&rsquo;t hide</li>
+                    <li><strong>50/30/20 Budget Framework</strong> &mdash; pre-built allocation system (50% needs, 30% wants, 20% savings) based on Senator Elizabeth Warren&rsquo;s proven framework</li>
+                    <li><strong>Category Breakdown</strong> &mdash; see exactly how much you spend on food, transport, entertainment, and every other category</li>
+                    <li><strong>Savings Goal Tracker</strong> &mdash; set targets and track progress toward emergency funds, vacations, or major purchases</li>
+                    <li><strong>Monthly Financial Review</strong> &mdash; guided prompts to assess spending patterns and adjust next month&rsquo;s plan</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Two Ways to Use It -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">Two Ways to Use It</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="mode-card beginner">
+                        <h4 class="text-blue-400">&#128994; Beginner Mode</h4>
+                        <p>Start by logging expenses for one week and listing all subscriptions. The template automatically categorizes spending and shows you where your money goes &mdash; just keep logging.</p>
+                    </div>
+                    <div class="mode-card advanced">
+                        <h4 class="text-purple-400">&#128311; Advanced Mode</h4>
+                        <p>Implement the full 50/30/20 framework, set savings automation targets, track net savings rate over time, run subscription ROI audits, and build a rolling 3-month spending trend analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Science Behind It -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-3">The Science Behind It</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    This template applies principles from <strong class="text-gray-100">behavioral economics</strong>: making spending visible fundamentally changes how you spend. Research by Prelec and Simester at MIT showed that people spend up to <strong class="text-gray-100">83% more</strong> when using credit cards vs. cash &mdash; because the pain of payment is invisible. This template restores that visibility.
+                </p>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    The 50/30/20 framework comes from <strong class="text-gray-100">Elizabeth Warren&rsquo;s <em>All Your Worth</em></strong> and is recommended by the Consumer Financial Protection Bureau. It works because it&rsquo;s simple enough to follow and flexible enough to adapt &mdash; unlike rigid budgets that collapse the first week.
+                </p>
+                <p class="text-gray-300 leading-relaxed">
+                    This is <strong class="text-gray-100">Nth-order thinking</strong> applied to money: financial visibility (first order) changes spending behavior (second order), which accelerates savings (third order), which unlocks investing and compound growth. One template doesn&rsquo;t just organize your budget &mdash; it reshapes your entire financial trajectory.
+                </p>
+            </div>
+        </section>
+
+        <!-- Why Others Fall Short -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">Why Others Fall Short</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Banking apps show you what you spent. They don&rsquo;t help you understand <em>why</em> you spent it or build a system to change the pattern.
+                </p>
+                <ul class="diff-list mb-4">
+                    <li><strong>Banking apps</strong> (Mint, YNAB) auto-categorize but give you no actionable framework</li>
+                    <li><strong>Spreadsheet budgets</strong> require constant manual maintenance and die within weeks</li>
+                    <li><strong>This template</strong> combines transaction tracking, subscription auditing, a proven budget framework, and guided monthly reviews in one workspace that turns financial awareness into financial control</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="px-6 py-12">
+            <div class="max-w-3xl mx-auto">
+                <a href="#" class="block w-full text-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300 text-lg">
+                    Get This Template
+                </a>
+            </div>
+        </section>
+
+        <!-- Related Templates -->
+        <section class="px-6 py-24 border-t border-gray-800/50">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8 text-gradient">Related Templates</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="/templates/debt-snowball-calculator" class="glass-panel p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="text-3xl mb-3">&#128176;</div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-blue-400 transition-colors">Debt Snowball Calculator</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Crush debt using the proven Snowball Method with payment tracking and net worth monitoring.</p>
+                    </a>
+                    <a href="/templates/habit-tracker" class="glass-panel p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="text-3xl mb-3">&#127919;</div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-blue-400 transition-colors">Habit Tracker Pro</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Build lasting habits with streak tracking, daily logs, and 30-day challenges.</p>
+                    </a>
+                    <a href="/templates/life-os" class="glass-panel p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="text-3xl mb-3">&#127968;</div>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-blue-400 transition-colors">Life OS</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Comprehensive life dashboard with goals, projects, habits, journal, and more.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-gray-800/50 text-center text-gray-600 text-sm">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="/#products" class="hover:text-gray-400 transition">Products</a>
+            <a href="/privacy.html" class="hover:text-gray-400 transition">Privacy Policy</a>
+            <a href="/terms.html" class="hover:text-gray-400 transition">Terms of Use</a>
+        </div>
+        <p>&copy; 2026 EvolvNth. All rights reserved!</p>
+    </footer>
+
+</body>
+</html>

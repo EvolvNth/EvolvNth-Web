@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Life OS Template | All-in-One Life Dashboard | EvolvNth</title>
+    <meta name="description" content="The ultimate Notion life operating system. 7 interconnected databases for goals, projects, habits, journal, workouts, reading, and relationships. OKR framework meets GTD methodology in one flagship template.">
+    <link rel="canonical" href="https://evolvnth.com/templates/life-os">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Notion Life OS Template | All-in-One Life Dashboard | EvolvNth">
+    <meta property="og:description" content="The ultimate Notion life operating system. 7 interconnected databases for goals, projects, habits, journal, workouts, reading, and relationships. OKR framework meets GTD methodology in one flagship template.">
+    <meta property="og:url" content="https://evolvnth.com/templates/life-os">
+    <meta property="og:image" content="https://evolvnth.com/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EvolvNth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notion Life OS Template | All-in-One Life Dashboard | EvolvNth">
+    <meta name="twitter:description" content="The ultimate Notion life operating system. 7 interconnected databases for goals, projects, habits, journal, workouts, reading, and relationships. OKR framework meets GTD methodology in one flagship template.">
+    <meta name="twitter:image" content="https://evolvnth.com/og-image.png">
+
+    <!-- JSON-LD Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Life OS - Personal Command Center - Notion Template",
+        "description": "The ultimate Notion life operating system. 7 interconnected databases for goals, projects, habits, journal, workouts, reading, and relationships. OKR framework meets GTD methodology in one flagship template.",
+        "url": "https://evolvnth.com/templates/life-os",
+        "brand": {
+            "@type": "Brand",
+            "name": "EvolvNth"
+        },
+        "category": "Notion Templates > Life Management"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif']
+                }
+            }
+        }
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+
+        .feature-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-list li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .mode-card {
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mode-card.beginner {
+            background: rgba(59, 130, 246, 0.06);
+            border-color: rgba(59, 130, 246, 0.15);
+        }
+
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.06);
+            border-color: rgba(139, 92, 246, 0.15);
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
+        }
+
+        .related-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        .related-card {
+            transition: all 0.3s ease;
+        }
+
+        .flagship-badge {
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Nav Bar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px);">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold text-gradient tracking-tight">EvolvNth</a>
+            <div class="flex items-center gap-6 text-sm text-gray-400">
+                <a href="/#products" class="hover:text-white transition-colors">All Templates</a>
+                <a href="mailto:evolvnth@gmail.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-7xl mb-6">&#x1F3E0;</div>
+            <div class="mb-4">
+                <span class="flagship-badge">Flagship</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Life OS &mdash; Personal Command Center</h1>
+            <p class="text-gray-400 text-lg mb-8">Notion &middot; 7 databases &middot; Flagship</p>
+            <blockquote class="border-l-4 border-blue-500 pl-6 text-xl italic text-gray-300 text-left max-w-xl mx-auto">
+                Imagine opening one dashboard and seeing your goals, projects, habits, health, journal, and relationships &mdash; all talking to each other.
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Built For -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-amber-400 mb-6">Built For</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Ambitious individuals who are tired of managing their life across 7 different apps that don't communicate. Professionals, entrepreneurs, and self-improvement enthusiasts who want a unified system where tracking a workout, completing a project, and maintaining a relationship all feed into the same life picture.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-400 mb-6">The Problem</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Your goals live in one app, your habits in another, your journal in a third, your workouts in a fourth. None of them talk to each other. You can't see how your sleep affects your productivity, how your habits connect to your goals, or whether your daily actions actually serve your quarterly objectives. You're managing fragments of your life in isolation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-blue-400 mb-6">What's Inside</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <ul class="feature-list list-none text-gray-300 leading-relaxed">
+                    <li><strong class="text-white">Goals Dashboard</strong> &mdash; quarterly and annual goals with OKR-style key results and progress tracking</li>
+                    <li><strong class="text-white">Project Manager</strong> &mdash; active projects linked to goals with task breakdowns, deadlines, and status tracking</li>
+                    <li><strong class="text-white">Habit Tracker</strong> &mdash; daily habit logging with streak tracking and consistency scoring</li>
+                    <li><strong class="text-white">Daily Journal</strong> &mdash; structured entries with prompts for gratitude, reflection, energy levels, and weekly/monthly/quarterly reviews</li>
+                    <li><strong class="text-white">Workout Log</strong> &mdash; exercise tracking with type, duration, intensity, and energy correlation</li>
+                    <li><strong class="text-white">Reading Tracker</strong> &mdash; books and articles with status, ratings, and key takeaway fields</li>
+                    <li><strong class="text-white">Personal CRM</strong> &mdash; relationship management with contacts, interactions, and follow-up scheduling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Ways to Use It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Two Ways to Use It</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="mode-card beginner">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-4">Beginner Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Start with the Daily Journal and Habit Tracker &mdash; just two databases. Build the daily check-in habit first. Once it's automatic, expand into Goals, Projects, and the other systems at your own pace.
+                    </p>
+                </div>
+                <div class="mode-card advanced">
+                    <h3 class="text-lg font-semibold text-purple-400 mb-4">Advanced Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Implement the full OKR framework, cross-reference habits against goal progress, correlate journal entries with productivity metrics, build quarterly review rituals, and optimize your life as an integrated system.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Science Behind It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-purple-400 mb-6">The Science Behind It</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Brings together OKRs (Objectives and Key Results) from Intel, Google, and Amazon, and GTD (Getting Things Done) by David Allen. Self-determination theory (Deci &amp; Ryan) shows progress toward meaningful goals is the strongest predictor of sustained motivation and well-being.
+                    </p>
+                    <p>
+                        When daily habits, projects, and reflections are visibly connected to bigger goals, every action feels purposeful. This is Nth-order thinking at its fullest expression: seven interconnected systems where a workout log informs energy patterns, which optimizes work schedule, which advances projects, which achieves quarterly goals.
+                    </p>
+                    <p>
+                        Every database amplifies the others. The cascade is the product.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Others Fall Short -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-emerald-400 mb-6">Why Others Fall Short</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        There are thousands of Notion templates. But almost none solve the real problem: your life is one system, and your tools should reflect that. Individual templates give you one piece with no connection to the rest. All-in-one apps (Notion, ClickUp) give you the platform but no structure.
+                    </p>
+                    <ul class="feature-list list-none">
+                        <li>Seven purpose-built databases engineered to work together, not a loose collection of unrelated trackers</li>
+                        <li>Built-in review cycles that surface insights across every area of your life &mdash; weekly, monthly, and quarterly</li>
+                        <li>It's not a collection of tools &mdash; it's a life operating system where every database amplifies the others</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Button -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <a href="#" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg py-4 rounded-xl transition-colors cta-glow">
+                Get the Flagship Template
+            </a>
+        </div>
+    </section>
+
+    <!-- Related Templates -->
+    <section class="px-6 py-24">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Explore More Templates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="/templates/habit-tracker" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F3AF;</div>
+                    <h3 class="text-white font-semibold mb-2">Habit Tracker Pro</h3>
+                    <p class="text-gray-400 text-sm">Build lasting habits with streak tracking, habit stacking, and pattern analysis based on Atomic Habits.</p>
+                </a>
+                <a href="/templates/budget-expense-tracker" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F4B0;</div>
+                    <h3 class="text-white font-semibold mb-2">Budget Tracker</h3>
+                    <p class="text-gray-400 text-sm">Take control of your money with automated tracking, spending insights, and savings goals that compound over time.</p>
+                </a>
+                <a href="/templates/personal-crm" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F465;</div>
+                    <h3 class="text-white font-semibold mb-2">Personal CRM</h3>
+                    <p class="text-gray-400 text-sm">Never lose touch again. Manage relationships, track interactions, and schedule follow-ups. Free template.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 px-6 py-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-6">
+                <a href="/#products" class="hover:text-white transition-colors">Products</a>
+                <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+            </div>
+            <p>&copy; 2026 EvolvNth. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

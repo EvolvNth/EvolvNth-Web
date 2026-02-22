@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Job Tracker Template | Application Pipeline &amp; Interview Prep | EvolvNth</title>
+    <meta name="description" content="Land your dream job with our Notion job hunt dashboard template. Features application pipeline tracking, STAR method interview prep, networking CRM, salary research, and follow-up scheduling.">
+    <link rel="canonical" href="https://evolvnth.com/templates/job-hunt-dashboard">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Notion Job Tracker Template | Application Pipeline &amp; Interview Prep | EvolvNth">
+    <meta property="og:description" content="Land your dream job with our Notion job hunt dashboard template. Features application pipeline tracking, STAR method interview prep, networking CRM, salary research, and follow-up scheduling.">
+    <meta property="og:url" content="https://evolvnth.com/templates/job-hunt-dashboard">
+    <meta property="og:image" content="https://evolvnth.com/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EvolvNth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notion Job Tracker Template | Application Pipeline &amp; Interview Prep | EvolvNth">
+    <meta name="twitter:description" content="Land your dream job with our Notion job hunt dashboard template. Features application pipeline tracking, STAR method interview prep, networking CRM, salary research, and follow-up scheduling.">
+    <meta name="twitter:image" content="https://evolvnth.com/og-image.png">
+
+    <!-- JSON-LD Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Job Hunt Dashboard - Notion Template",
+        "description": "Land your dream job with our Notion job hunt dashboard template. Features application pipeline tracking, STAR method interview prep, networking CRM, salary research, and follow-up scheduling.",
+        "url": "https://evolvnth.com/templates/job-hunt-dashboard",
+        "brand": {
+            "@type": "Brand",
+            "name": "EvolvNth"
+        },
+        "category": "Notion Templates > Career"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif']
+                }
+            }
+        }
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+
+        .feature-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-list li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .mode-card {
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mode-card.beginner {
+            background: rgba(59, 130, 246, 0.06);
+            border-color: rgba(59, 130, 246, 0.15);
+        }
+
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.06);
+            border-color: rgba(139, 92, 246, 0.15);
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
+        }
+
+        .related-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        .related-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Nav Bar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px);">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold text-gradient tracking-tight">EvolvNth</a>
+            <div class="flex items-center gap-6 text-sm text-gray-400">
+                <a href="/#products" class="hover:text-white transition-colors">All Templates</a>
+                <a href="mailto:evolvnth@gmail.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-7xl mb-6">&#x1F4BC;</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Job Hunt Dashboard</h1>
+            <p class="text-gray-400 text-lg mb-8">Notion &middot; 2+ databases &middot; Strategic job search</p>
+            <blockquote class="border-l-4 border-blue-500 pl-6 text-xl italic text-gray-300 text-left max-w-xl mx-auto">
+                80% of jobs are filled through networking. If your job search is just applying online, you're playing a losing game.
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Built For -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-amber-400 mb-6">Built For</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Active job seekers at every level &mdash; new graduates entering the market, mid-career professionals seeking advancement, and career changers navigating unfamiliar industries. Whether you're applying to 10 or 100 positions, a chaotic search costs you opportunities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-400 mb-6">The Problem</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    You're applying to jobs through a fog. Applications disappear into portals with no follow-up system. You prep for interviews at the last minute with no structured framework. You meet people who could help your career, then lose their contact info. And you have no idea if the salary they offer is fair.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-blue-400 mb-6">What's Inside</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <ul class="feature-list list-none text-gray-300 leading-relaxed">
+                    <li><strong class="text-white">Application Pipeline</strong> &mdash; track every application with company, role, status (Applied &rarr; Phone Screen &rarr; Interview &rarr; Offer), and follow-up dates</li>
+                    <li><strong class="text-white">Interview Prep Sheets</strong> &mdash; structured STAR method templates for behavioral questions with space for company research and role-specific preparation</li>
+                    <li><strong class="text-white">Networking CRM</strong> &mdash; track contacts, conversations, referral status, and follow-up cadences</li>
+                    <li><strong class="text-white">Salary Research Tracker</strong> &mdash; log compensation data by company and role to negotiate from a position of knowledge</li>
+                    <li><strong class="text-white">Follow-Up Scheduler</strong> &mdash; automated reminders so no application or connection falls through the cracks</li>
+                    <li><strong class="text-white">Weekly Job Search Review</strong> &mdash; structured reflection on what's working and what needs to change</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Ways to Use It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Two Ways to Use It</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="mode-card beginner">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-4">Beginner Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Start by logging your target companies and open applications. Follow the guided weekly job search routine and use the interview prep template before each conversation.
+                    </p>
+                </div>
+                <div class="mode-card advanced">
+                    <h3 class="text-lg font-semibold text-purple-400 mb-4">Advanced Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Build a strategic networking map, track application conversion rates by channel, implement salary negotiation frameworks, and analyze your pipeline to identify where candidates stall.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Science Behind It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-purple-400 mb-6">The Science Behind It</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Applies Cialdini's reciprocity principle to job searching &mdash; when you give value in networking conversations before asking for help, people are psychologically wired to return the favor. This transforms cold outreach into warm relationships.
+                    </p>
+                    <p>
+                        The interview prep system is built on the STAR method (Situation, Task, Action, Result) &mdash; the format hiring managers are trained to evaluate. Structured preparation eliminates rambling answers and surfaces the stories that demonstrate your impact.
+                    </p>
+                    <p>
+                        This is Nth-order thinking applied to career transitions: systematic preparation (first order) leads to stronger interviews (second order), which leads to better offers and a higher salary baseline (third order) that compounds across decades of earning potential.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Others Fall Short -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-emerald-400 mb-6">Why Others Fall Short</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Job boards track applications but nothing else. ATS tools optimize resumes but ignore the human side. This manages the <strong class="text-white">complete campaign</strong> &mdash; applications, networking, interview prep, salary research, and follow-ups in one unified system.
+                    </p>
+                    <ul class="feature-list list-none">
+                        <li>LinkedIn and Indeed track where you applied but offer no follow-up system, no interview prep, and no networking management</li>
+                        <li>ATS optimization tools like Jobscan focus on beating algorithms but ignore the 80% of jobs filled through human connections</li>
+                        <li>Built with Nth-order design: other tools help you apply to jobs. This one is engineered so every application, conversation, and interview compounds into a career trajectory &mdash; not just a single offer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Button -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <a href="#" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg py-4 rounded-xl transition-colors cta-glow">
+                Get This Template
+            </a>
+        </div>
+    </section>
+
+    <!-- Related Templates -->
+    <section class="px-6 py-24">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Explore More Templates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="/templates/personal-crm" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F465;</div>
+                    <h3 class="text-white font-semibold mb-2">Personal CRM</h3>
+                    <p class="text-gray-400 text-sm">Never lose a connection again. Track relationships, follow-ups, and networking touchpoints in one organized system.</p>
+                </a>
+                <a href="/templates/student-command-center" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F393;</div>
+                    <h3 class="text-white font-semibold mb-2">Student Command Center</h3>
+                    <p class="text-gray-400 text-sm">Manage classes, assignments, exams, and GPA in one organized workspace designed for academic success.</p>
+                </a>
+                <a href="/templates/life-os" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F30D;</div>
+                    <h3 class="text-white font-semibold mb-2">Life OS Dashboard</h3>
+                    <p class="text-gray-400 text-sm">Your entire life in one command center. Goals, projects, habits, and routines unified in a single Notion workspace.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 px-6 py-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-6">
+                <a href="/#products" class="hover:text-white transition-colors">Products</a>
+                <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+            </div>
+            <p>&copy; 2026 EvolvNth. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

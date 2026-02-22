@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Notion Personal CRM Template | Relationship Tracker | EvolvNth</title>
+    <meta name="description" content="Never lose touch with the people who matter. Free Notion personal CRM template with contact management, interaction logging, follow-up cadences, important dates, and relationship reviews. Based on Dunbar's number research.">
+    <link rel="canonical" href="https://evolvnth.com/templates/personal-crm">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Notion Personal CRM Template | Relationship Tracker | EvolvNth">
+    <meta property="og:description" content="Never lose touch with the people who matter. Free Notion personal CRM template with contact management, interaction logging, follow-up cadences, important dates, and relationship reviews. Based on Dunbar's number research.">
+    <meta property="og:url" content="https://evolvnth.com/templates/personal-crm">
+    <meta property="og:image" content="https://evolvnth.com/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EvolvNth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Notion Personal CRM Template | Relationship Tracker | EvolvNth">
+    <meta name="twitter:description" content="Never lose touch with the people who matter. Free Notion personal CRM template with contact management, interaction logging, follow-up cadences, important dates, and relationship reviews. Based on Dunbar's number research.">
+    <meta name="twitter:image" content="https://evolvnth.com/og-image.png">
+
+    <!-- JSON-LD Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Personal CRM - Free Notion Template",
+        "description": "Never lose touch with the people who matter. Free Notion personal CRM template with contact management, interaction logging, follow-up cadences, important dates, and relationship reviews. Based on Dunbar's number research.",
+        "url": "https://evolvnth.com/templates/personal-crm",
+        "brand": {
+            "@type": "Brand",
+            "name": "EvolvNth"
+        },
+        "category": "Notion Templates > Relationships"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif']
+                }
+            }
+        }
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 0%, #064e3b 0%, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #10b981, #34d399);
+        }
+
+        .feature-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-list li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        .mode-card {
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mode-card.beginner {
+            background: rgba(16, 185, 129, 0.06);
+            border-color: rgba(16, 185, 129, 0.15);
+        }
+
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.06);
+            border-color: rgba(139, 92, 246, 0.15);
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.3), 0 0 60px rgba(16, 185, 129, 0.1);
+        }
+
+        .related-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        .related-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Nav Bar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px);">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold text-gradient tracking-tight">EvolvNth</a>
+            <div class="flex items-center gap-6 text-sm text-gray-400">
+                <a href="/#products" class="hover:text-white transition-colors">All Templates</a>
+                <a href="mailto:evolvnth@gmail.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-7xl mb-6">&#x1F91D;</div>
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <h1 class="text-4xl md:text-5xl font-bold text-gradient">Personal CRM</h1>
+                <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-bold tracking-widest uppercase rounded-full">Free</span>
+            </div>
+            <p class="text-gray-400 text-lg mb-8">Notion &middot; 3 databases &middot; Free</p>
+            <blockquote class="border-l-4 border-emerald-500 pl-6 text-xl italic text-gray-300 text-left max-w-xl mx-auto">
+                You don&rsquo;t lose relationships because you stop caring. You lose them because you don&rsquo;t have a system for caring consistently.
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Built For -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-amber-400 mb-6">Built For</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Professionals building their network, freelancers managing client relationships, people who&rsquo;ve moved cities and want to maintain long-distance friendships, and anyone who has ever thought &ldquo;I should really reach out to them&rdquo; and then didn&rsquo;t. Also for introverts who find relationship maintenance overwhelming without structure.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-400 mb-6">The Problem</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    You have good intentions but no system. You think about old friends and colleagues but don&rsquo;t follow up. You meet great people at events and lose their information. Birthdays pass without acknowledgment. Important relationships quietly fade &mdash; not from neglect, but from the absence of a reminder to show up.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-emerald-400 mb-6">What's Inside</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <ul class="feature-list list-none text-gray-300 leading-relaxed">
+                    <li><strong class="text-white">Contacts Database</strong> &mdash; your complete relationship network organized by Circle tier (Inner Circle, Close, Active, Casual, Distant) with contact details, notes, and tags</li>
+                    <li><strong class="text-white">Interaction Log</strong> &mdash; record every meaningful conversation, coffee meeting, email exchange, and favor &mdash; your external relationship memory</li>
+                    <li><strong class="text-white">Important Dates Tracker</strong> &mdash; birthdays, anniversaries, work milestones, and custom dates with upcoming date views</li>
+                    <li><strong class="text-white">Follow-Up Cadences</strong> &mdash; recommended contact frequency by tier (Inner Circle: weekly, Distant: quarterly) so no one slips away</li>
+                    <li><strong class="text-white">Relationship Playbook</strong> &mdash; built-in frameworks for follow-up messages, conversation starters, and monthly relationship reviews</li>
+                    <li><strong class="text-white">Last Contact Views</strong> &mdash; instantly see who you haven&rsquo;t reached out to in too long</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Ways to Use It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Two Ways to Use It</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="mode-card beginner">
+                    <h3 class="text-lg font-semibold text-emerald-400 mb-4">Beginner Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Add your 20 most important contacts, set their Circle tier, and log your next interaction with each. Follow the weekly review to stay on top of follow-ups &mdash; the template does the remembering for you.
+                    </p>
+                </div>
+                <div class="mode-card advanced">
+                    <h3 class="text-lg font-semibold text-purple-400 mb-4">Advanced Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Build a comprehensive network map, implement strategic relationship development plans, track reciprocity balance, analyze your network for gaps, and run quarterly relationship audits.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Science Behind It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-purple-400 mb-6">The Science Behind It</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Grounded in <strong class="text-white">Robin Dunbar&rsquo;s research</strong> on social circles: humans can meaningfully maintain roughly 150 relationships, but only 5 are in your innermost circle, 15 in the next, and 50 in the third. The Circle tier system maps directly to Dunbar&rsquo;s layers, giving each relationship the appropriate level of attention.
+                    </p>
+                    <p>
+                        The follow-up system leverages <strong class="text-white">Cialdini&rsquo;s principle of reciprocity</strong>: small, consistent acts of connection &mdash; a birthday message, a shared article, a quick check-in &mdash; create disproportionate goodwill. Relationships are compounding assets, and this template ensures you invest in them regularly.
+                    </p>
+                    <p>
+                        This is <strong class="text-white">Nth-order thinking</strong> applied to relationships: one follow-up message (first order) strengthens a connection (second order), which leads to an unexpected referral or opportunity (third order), which opens doors you couldn&rsquo;t have predicted. Relationships are the ultimate compounding asset &mdash; and this template ensures you never stop investing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Others Fall Short -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-emerald-400 mb-6">Why Others Fall Short</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Your phone&rsquo;s contact list stores numbers. LinkedIn stores profiles. Neither helps you actually <strong class="text-white">maintain</strong> relationships.
+                    </p>
+                    <ul class="feature-list list-none">
+                        <li>Phone contacts have no interaction history, no follow-up reminders, and no relationship context</li>
+                        <li>LinkedIn is a public-facing network, not a personal relationship management tool</li>
+                        <li>CRM software (HubSpot, Salesforce) is designed for sales pipelines, not personal relationships</li>
+                        <li>This template is purpose-built for human connection &mdash; and it&rsquo;s completely free because we believe strong relationships are the foundation everything else is built on</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Button -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <a href="#" class="block w-full text-center bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-lg py-4 rounded-xl transition-colors cta-glow">
+                Get It Free
+            </a>
+        </div>
+    </section>
+
+    <!-- Related Templates -->
+    <section class="px-6 py-24">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Explore More Templates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="/templates/job-hunt-dashboard" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F4BC;</div>
+                    <h3 class="text-white font-semibold mb-2">Job Hunt Dashboard</h3>
+                    <p class="text-gray-400 text-sm">Organized job search with application tracking, interview prep, networking CRM, and salary research.</p>
+                </a>
+                <a href="/templates/life-os" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F3E0;</div>
+                    <h3 class="text-white font-semibold mb-2">Life OS Dashboard</h3>
+                    <p class="text-gray-400 text-sm">Your entire life in one command center. Goals, projects, habits, and routines unified in a single Notion workspace.</p>
+                </a>
+                <a href="/templates/habit-tracker" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F3AF;</div>
+                    <h3 class="text-white font-semibold mb-2">Habit Tracker Pro</h3>
+                    <p class="text-gray-400 text-sm">Build lasting habits with streak tracking, daily logs, habit stacking, and 30-day challenges.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 px-6 py-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-6">
+                <a href="/#products" class="hover:text-white transition-colors">Products</a>
+                <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+            </div>
+            <p>&copy; 2026 EvolvNth. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

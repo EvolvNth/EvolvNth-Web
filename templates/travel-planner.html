@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Travel Planner Template | Trip Itinerary &amp; Budget Tracker | EvolvNth</title>
+    <meta name="description" content="Plan your perfect trip with our Notion travel planner template. Features day-by-day itinerary builder, travel budget tracker, bucket list, packing lists, and booking hub. Designed for effortless travel.">
+    <link rel="canonical" href="https://evolvnth.com/templates/travel-planner">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Notion Travel Planner Template | Trip Itinerary &amp; Budget Tracker | EvolvNth">
+    <meta property="og:description" content="Plan your perfect trip with our Notion travel planner template. Features day-by-day itinerary builder, travel budget tracker, bucket list, packing lists, and booking hub. Designed for effortless travel.">
+    <meta property="og:url" content="https://evolvnth.com/templates/travel-planner">
+    <meta property="og:image" content="https://evolvnth.com/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EvolvNth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notion Travel Planner Template | Trip Itinerary &amp; Budget Tracker | EvolvNth">
+    <meta name="twitter:description" content="Plan your perfect trip with our Notion travel planner template. Features day-by-day itinerary builder, travel budget tracker, bucket list, packing lists, and booking hub. Designed for effortless travel.">
+    <meta name="twitter:image" content="https://evolvnth.com/og-image.png">
+
+    <!-- JSON-LD Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Travel Planner - Notion Template",
+        "description": "Plan your perfect trip with our Notion travel planner template. Features day-by-day itinerary builder, travel budget tracker, bucket list, packing lists, and booking hub. Designed for effortless travel.",
+        "url": "https://evolvnth.com/templates/travel-planner",
+        "brand": {
+            "@type": "Brand",
+            "name": "EvolvNth"
+        },
+        "category": "Notion Templates > Travel"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif']
+                }
+            }
+        }
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+
+        .feature-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-list li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .mode-card {
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mode-card.beginner {
+            background: rgba(59, 130, 246, 0.06);
+            border-color: rgba(59, 130, 246, 0.15);
+        }
+
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.06);
+            border-color: rgba(139, 92, 246, 0.15);
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
+        }
+
+        .related-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        .related-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Nav Bar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px);">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold text-gradient tracking-tight">EvolvNth</a>
+            <div class="flex items-center gap-6 text-sm text-gray-400">
+                <a href="/#products" class="hover:text-white transition-colors">All Templates</a>
+                <a href="mailto:evolvnth@gmail.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-7xl mb-6">&#9992;&#65039;</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Travel Planner</h1>
+            <p class="text-gray-400 text-lg mb-8">Notion &middot; 3 databases &middot; Trip planning made effortless</p>
+            <blockquote class="border-l-4 border-blue-500 pl-6 text-xl italic text-gray-300 text-left max-w-xl mx-auto">
+                The best trips aren't spontaneous. They're designed so well that they feel effortless.
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Built For -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-amber-400 mb-6">Built For</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Weekend warriors, international adventurers, family trip planners, digital nomads, and anyone who's ever come home from a trip thinking "I wish I'd planned that better." Whether it's a 3-day city break or a 30-day backpacking route, this handles it.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-400 mb-6">The Problem</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Your trip research lives in 20 browser tabs, a scattered Notes doc, and a text thread you can't find. You overspend because you never set a budget. You miss must-see spots because your itinerary was a vague list of "maybe" locations. And packing? You always forget something.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-blue-400 mb-6">What's Inside</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <ul class="feature-list list-none text-gray-300 leading-relaxed">
+                    <li><strong class="text-white">Trip Database</strong> &mdash; organize every trip with dates, destination, budget, status, and linked itineraries</li>
+                    <li><strong class="text-white">Day-by-Day Itinerary Builder</strong> &mdash; plan each day with time blocks, activities, locations, estimated costs, and notes</li>
+                    <li><strong class="text-white">Travel Budget Tracker</strong> &mdash; set a trip budget and track spending by category (flights, accommodation, food, activities)</li>
+                    <li><strong class="text-white">Bucket List</strong> &mdash; lifetime destination list with priority ranking, estimated costs, and best travel seasons</li>
+                    <li><strong class="text-white">Packing List Templates</strong> &mdash; reusable lists by trip type (beach, city, hiking, business) so you never forget essentials</li>
+                    <li><strong class="text-white">Booking &amp; Confirmation Hub</strong> &mdash; store flight numbers, hotel confirmations, and reservation details in one place</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Ways to Use It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Two Ways to Use It</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="mode-card beginner">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-4">Beginner Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Pick your next trip, use the packing list template, and fill in the day-by-day itinerary with your must-do activities. The template keeps everything organized without overwhelming you.
+                    </p>
+                </div>
+                <div class="mode-card advanced">
+                    <h3 class="text-lg font-semibold text-purple-400 mb-4">Advanced Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Build multi-city routing plans, track spending against budget in real time, maintain a scored bucket list with seasonal optimization, and create reusable trip templates for repeat destinations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Science Behind It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-purple-400 mb-6">The Science Behind It</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Leverages the peak-end rule from Nobel laureate Daniel Kahneman's research: your memory of a trip is shaped by its peak moment and its ending. The itinerary builder helps you design those peaks deliberately rather than leaving them to chance.
+                    </p>
+                    <p>
+                        Pre-trip planning reduces decision fatigue &mdash; the cognitive drain of making choices on the fly that turns a vacation into work. When logistics are handled in advance, you're free to be present and enjoy.
+                    </p>
+                    <p>
+                        This is Nth-order design in practice: intentional planning (first order) creates richer, more immersive experiences (second order), which become core memories that strengthen relationships and motivation (third order), which compounds into a life defined by adventure rather than routine.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Others Fall Short -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-emerald-400 mb-6">Why Others Fall Short</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        TripIt and travel apps organize confirmations but don't help you <em>design</em> the trip. Google Docs and Sheets are blank canvases with no structure. This template gives you reusable frameworks for every dimension of travel.
+                    </p>
+                    <ul class="feature-list list-none">
+                        <li>Travel apps handle bookings but ignore itinerary design, budgeting, and packing &mdash; the parts that make or break a trip</li>
+                        <li>Generic Notion templates give you a single table and call it a planner &mdash; no budget tracking, no packing lists, no booking hub</li>
+                        <li>Built with Nth-order design: other planners help you organize a trip. This one is engineered so each trip cascades into richer experiences, deeper relationships, and a life built around intentional adventure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Button -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <a href="#" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg py-4 rounded-xl transition-colors cta-glow">
+                Get This Template
+            </a>
+        </div>
+    </section>
+
+    <!-- Related Templates -->
+    <section class="px-6 py-24">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Explore More Templates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="/templates/budget-expense-tracker" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#128202;</div>
+                    <h3 class="text-white font-semibold mb-2">Budget &amp; Expense Tracker</h3>
+                    <p class="text-gray-400 text-sm">Complete financial control with transaction logging, subscription audit, and 50/30/20 budgeting framework.</p>
+                </a>
+                <a href="/templates/second-brain" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#129504;</div>
+                    <h3 class="text-white font-semibold mb-2">Second Brain / Knowledge Vault</h3>
+                    <p class="text-gray-400 text-sm">Personal knowledge management with capture inbox, progressive summarization, and Zettelkasten-style connections.</p>
+                </a>
+                <a href="/templates/life-os" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#127968;</div>
+                    <h3 class="text-white font-semibold mb-2">Life OS &mdash; Personal Command Center</h3>
+                    <p class="text-gray-400 text-sm">Your entire life in one command center. Goals, projects, habits, and routines unified in a single Notion workspace.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 px-6 py-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-6">
+                <a href="/#products" class="hover:text-white transition-colors">Products</a>
+                <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+            </div>
+            <p>&copy; 2026 EvolvNth. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

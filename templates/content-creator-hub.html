@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Content Creator Template | Content Calendar &amp; Pipeline | EvolvNth</title>
+    <meta name="description" content="Manage your content creation workflow with our Notion content creator hub template. Features content pipeline, ideas bank, brand deals tracker, multi-platform views, and content calendar.">
+    <link rel="canonical" href="https://evolvnth.com/templates/content-creator-hub">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Notion Content Creator Template | Content Calendar &amp; Pipeline | EvolvNth">
+    <meta property="og:description" content="Manage your content creation workflow with our Notion content creator hub template. Features content pipeline, ideas bank, brand deals tracker, multi-platform views, and content calendar.">
+    <meta property="og:url" content="https://evolvnth.com/templates/content-creator-hub">
+    <meta property="og:image" content="https://evolvnth.com/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EvolvNth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notion Content Creator Template | Content Calendar &amp; Pipeline | EvolvNth">
+    <meta name="twitter:description" content="Manage your content creation workflow with our Notion content creator hub template. Features content pipeline, ideas bank, brand deals tracker, multi-platform views, and content calendar.">
+    <meta name="twitter:image" content="https://evolvnth.com/og-image.png">
+
+    <!-- JSON-LD Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Content Creator Hub - Notion Template",
+        "description": "Manage your content creation workflow with our Notion content creator hub template. Features content pipeline, ideas bank, brand deals tracker, multi-platform views, and content calendar.",
+        "url": "https://evolvnth.com/templates/content-creator-hub",
+        "brand": {
+            "@type": "Brand",
+            "name": "EvolvNth"
+        },
+        "category": "Notion Templates > Content Creation"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif']
+                }
+            }
+        }
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+
+        .feature-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-list li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .mode-card {
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mode-card.beginner {
+            background: rgba(59, 130, 246, 0.06);
+            border-color: rgba(59, 130, 246, 0.15);
+        }
+
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.06);
+            border-color: rgba(139, 92, 246, 0.15);
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
+        }
+
+        .related-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        .related-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Nav Bar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px);">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold text-gradient tracking-tight">EvolvNth</a>
+            <div class="flex items-center gap-6 text-sm text-gray-400">
+                <a href="/#products" class="hover:text-white transition-colors">All Templates</a>
+                <a href="mailto:evolvnth@gmail.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-7xl mb-6">&#x1F3AC;</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Content Creator Hub</h1>
+            <p class="text-gray-400 text-lg mb-8">Notion &middot; 3 databases &middot; Multi-platform management</p>
+            <blockquote class="border-l-4 border-blue-500 pl-6 text-xl italic text-gray-300 text-left max-w-xl mx-auto">
+                The creators who win aren't more talented. They have a system that never lets a good idea die.
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Built For -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-amber-400 mb-6">Built For</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    YouTubers, TikTokers, podcasters, bloggers, newsletter writers, and multi-platform creators at any stage &mdash; from your first 100 followers to established creators managing brand partnerships. If you create content on more than one platform, you need this.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-400 mb-6">The Problem</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Your best ideas are scattered across Notes apps, voice memos, and screenshots you'll never find again. You post inconsistently because there's no pipeline. Brand deals slip through the cracks. And you spend more time managing the chaos than actually creating.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-blue-400 mb-6">What's Inside</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <ul class="feature-list list-none text-gray-300 leading-relaxed">
+                    <li><strong class="text-white">Content Pipeline Database</strong> &mdash; track every piece from idea &rarr; draft &rarr; production &rarr; published with status, platform, and publish date</li>
+                    <li><strong class="text-white">Ideas Bank</strong> &mdash; capture ideas instantly with tags, priority scores, and platform fit so nothing gets lost</li>
+                    <li><strong class="text-white">Brand Deals Tracker</strong> &mdash; manage sponsorships with deliverables, payment status, deadlines, and contact info</li>
+                    <li><strong class="text-white">Multi-Platform Views</strong> &mdash; filtered views for YouTube, TikTok, Instagram, blog, podcast, and newsletter</li>
+                    <li><strong class="text-white">Analytics Tracking</strong> &mdash; log performance metrics to identify what resonates and double down</li>
+                    <li><strong class="text-white">Content Calendar</strong> &mdash; visual publishing schedule across all platforms</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Ways to Use It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Two Ways to Use It</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="mode-card beginner">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-4">Beginner Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Start by dumping all your ideas into the Ideas Bank, then move your next 5 pieces into the pipeline. Follow the weekly content planning routine to build your first consistent publishing schedule.
+                    </p>
+                </div>
+                <div class="mode-card advanced">
+                    <h3 class="text-lg font-semibold text-purple-400 mb-4">Advanced Mode</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Build content flywheels across platforms, track ROI on brand deals, analyze performance trends, implement batch production workflows, and run quarterly content audits to refine your strategy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Science Behind It -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-purple-400 mb-6">The Science Behind It</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Built on the Content Flywheel concept &mdash; every piece feeds the next. Batching research from productivity science shows that grouping similar tasks reduces context-switching costs by up to 40%. The Ideas Bank applies the GTD capture habit from David Allen's <em>Getting Things Done</em>.
+                    </p>
+                    <p>
+                        This is Nth-order thinking in action: one piece of content repurposed across platforms builds cumulative authority (first order), which attracts brand deals (second order), which funds better production (third order), which grows your audience and compounds your reach over time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Others Fall Short -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-emerald-400 mb-6">Why Others Fall Short</h2>
+            <div class="glass-panel rounded-xl p-6">
+                <div class="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Buffer and Hootsuite handle publishing but not the creative process. Trello and Asana don't understand content workflows. This covers the <strong class="text-white">entire lifecycle</strong> from idea to published post to brand deal payment.
+                    </p>
+                    <ul class="feature-list list-none">
+                        <li>Scheduling tools manage distribution but ignore ideation, production, and monetization</li>
+                        <li>Generic project management apps require you to build a content workflow from scratch with no creator-specific structure</li>
+                        <li>Built with Nth-order design: other tools help you post content. This one is engineered so consistent publishing compounds into audience growth, brand partnerships, and a sustainable creator business</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Button -->
+    <section class="px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <a href="#" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg py-4 rounded-xl transition-colors cta-glow">
+                Get This Template
+            </a>
+        </div>
+    </section>
+
+    <!-- Related Templates -->
+    <section class="px-6 py-24">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Explore More Templates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="/templates/second-brain" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F9E0;</div>
+                    <h3 class="text-white font-semibold mb-2">Second Brain</h3>
+                    <p class="text-gray-400 text-sm">Capture, organize, and retrieve everything you learn. Turn scattered information into a personal knowledge system that grows smarter over time.</p>
+                </a>
+                <a href="/templates/job-hunt-dashboard" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F4BC;</div>
+                    <h3 class="text-white font-semibold mb-2">Job Hunt Dashboard</h3>
+                    <p class="text-gray-400 text-sm">Track applications, interviews, networking contacts, and follow-ups in one organized workspace designed to land your next role.</p>
+                </a>
+                <a href="/templates/life-os" class="related-card glass-panel rounded-xl p-6 block text-center">
+                    <div class="text-4xl mb-3">&#x1F30D;</div>
+                    <h3 class="text-white font-semibold mb-2">Life OS Dashboard</h3>
+                    <p class="text-gray-400 text-sm">Your entire life in one command center. Goals, projects, habits, and routines unified in a single Notion workspace.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 px-6 py-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-6">
+                <a href="/#products" class="hover:text-white transition-colors">Products</a>
+                <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+            </div>
+            <p>&copy; 2026 EvolvNth. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
