@@ -62,6 +62,55 @@
         body.modal-open {
             overflow: hidden;
         }
+
+        /* Rich modal content styling */
+        .modal-rich-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .modal-rich-content ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        .modal-rich-content ul li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+        }
+        .modal-rich-content strong {
+            color: #f9fafb;
+            font-weight: 600;
+        }
+
+        /* Dual mode cards */
+        .mode-card {
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .mode-card.beginner {
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+        .mode-card.advanced {
+            background: rgba(139, 92, 246, 0.08);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+        .mode-card h4 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .mode-card p {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col">
@@ -277,22 +326,43 @@
             <h2 class="text-2xl md:text-3xl font-bold mb-2" id="modal-title"></h2>
             <p class="text-gray-500 text-sm mb-6" id="modal-db-count"></p>
 
-            <!-- Description -->
+            <!-- Hook -->
+            <p class="text-gray-200 text-lg italic leading-relaxed mb-6 border-l-2 border-blue-500 pl-4" id="modal-hook"></p>
+
+            <!-- Built For -->
             <div class="mb-6">
-                <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">What It Does</h3>
-                <p class="text-gray-300 leading-relaxed" id="modal-description"></p>
+                <h3 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-2">Built For</h3>
+                <p class="text-gray-300 leading-relaxed" id="modal-audience"></p>
             </div>
 
-            <!-- Value Proposition -->
+            <!-- The Problem -->
             <div class="mb-6">
-                <h3 class="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-2">Why It Works</h3>
-                <p class="text-gray-300 leading-relaxed" id="modal-value"></p>
+                <h3 class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-2">The Problem</h3>
+                <p class="text-gray-300 leading-relaxed" id="modal-problem"></p>
             </div>
 
-            <!-- Uniqueness Differentiator -->
-            <div class="mb-8">
-                <h3 class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-2">What Makes It Different</h3>
-                <p class="text-gray-300 leading-relaxed" id="modal-unique"></p>
+            <!-- What's Inside -->
+            <div class="mb-6 modal-rich-content">
+                <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">What's Inside</h3>
+                <div class="text-gray-300 leading-relaxed" id="modal-description"></div>
+            </div>
+
+            <!-- Dual Mode System -->
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-3">Two Ways to Use It</h3>
+                <div class="grid md:grid-cols-2 gap-3" id="modal-modes"></div>
+            </div>
+
+            <!-- The Science Behind It -->
+            <div class="mb-6 modal-rich-content">
+                <h3 class="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-2">The Science Behind It</h3>
+                <div class="text-gray-300 leading-relaxed" id="modal-value"></div>
+            </div>
+
+            <!-- Why Others Fall Short -->
+            <div class="mb-8 modal-rich-content">
+                <h3 class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-2">Why Others Fall Short</h3>
+                <div class="text-gray-300 leading-relaxed" id="modal-unique"></div>
             </div>
 
             <!-- CTA Button -->
@@ -369,90 +439,140 @@
             emoji: '\u{1F3AF}',
             title: 'Habit Tracker Pro',
             dbCount: 'Notion \u00B7 2 databases \u00B7 Science-backed framework',
-            description: 'Build lasting habits with streak tracking, daily logs, habit stacking, and 30-day challenges. Track your consistency visually, identify patterns, and use proven behavioral science techniques to make good habits stick and break bad ones.',
-            value: 'Most habit trackers just give you checkboxes. This template applies Nth-order thinking: your daily habits are tracked alongside weekly patterns, surfacing insights that reshape your routines over time. The result is a compounding system where each small win builds momentum across your health, productivity, and personal growth.',
-            unique: 'Built-in habit stacking framework based on James Clear\'s methodology. Pre-configured 30-day challenge templates. Visual streak tracking with emoji Day Score indicators that make consistency addictive. Two purpose-built databases \u2014 one for defining habits, one for daily tracking \u2014 organized in one workspace.',
+            hook: 'You don\u2019t lack willpower. You lack a system that makes consistency automatic.',
+            audience: 'Students, professionals, and anyone who has downloaded a habit app, used it for two weeks, then quietly deleted it. If you\u2019ve ever set a goal on January 1st and abandoned it by February, this was built for you.',
+            problem: 'Habit apps give you checkboxes and streaks \u2014 then leave you alone with no insight into why you keep failing on Wednesdays, why your morning routine collapses on weekends, or which habits actually move the needle. You\u2019re tracking activity without understanding behavior.',
+            description: '<ul><li><strong>Habit Definition Database</strong> \u2014 define each habit with frequency, category, difficulty level, and your personal "why" so every habit has purpose</li><li><strong>Daily Tracking Log</strong> \u2014 log completions with emoji Day Scores that make your consistency visible at a glance</li><li><strong>Streak Tracking</strong> \u2014 automated streak counters that reward momentum and surface your longest runs</li><li><strong>Habit Stacking Framework</strong> \u2014 link habits in sequences based on James Clear\u2019s <em>Atomic Habits</em> methodology so one cue triggers the next</li><li><strong>30-Day Challenge Templates</strong> \u2014 pre-built challenges with daily prompts to kickstart new behaviors</li><li><strong>Pattern Analysis Views</strong> \u2014 weekly and monthly views that reveal which days, times, and conditions produce your best results</li></ul>',
+            beginnerMode: 'Start with 3 keystone habits. Follow the guided daily check-in routine. The template walks you through exactly what to track and when \u2014 no decisions required.',
+            advancedMode: 'Unlock habit stacking chains, cross-reference completion rates against energy levels, build custom 30-day challenges, and use the monthly review system to optimize your routine like a behavioral scientist.',
+            value: '<p>This template is built on the <strong>Habit Loop</strong> (cue \u2192 routine \u2192 reward) from Charles Duhigg\u2019s research and the <strong>identity-based habit</strong> framework from James Clear\u2019s <em>Atomic Habits</em>. Instead of relying on motivation (which is unreliable), the system leverages <strong>implementation intentions</strong> \u2014 the psychological technique of binding a behavior to a specific cue and context, which studies show increases follow-through by over 40%.</p><p style="margin-top:0.75rem">The visual streak system exploits <strong>loss aversion</strong>: once you\u2019ve built a 15-day streak, the psychological cost of breaking it becomes a more powerful motivator than the original goal. That\u2019s not a gimmick \u2014 it\u2019s behavioral economics working in your favor.</p><p style="margin-top:0.75rem">This is <strong>Nth-order design</strong> in practice: a daily check-in (first order) builds consistency (second order), which reshapes your identity as someone who follows through (third order), which transforms your discipline across health, work, and relationships. We don\u2019t design for the checkbox \u2014 we design for the cascade.</p>',
+            unique: '<p>Generic habit apps track completion. This template tracks <strong>behavior patterns</strong>. Most tools can tell you that you missed Tuesday \u2014 ours shows you <em>why</em> Tuesdays fail and what to change.</p><ul><li><strong>Competing apps</strong> (Habitica, Streaks, HabitBull) are mobile-first checklists with no analytical depth</li><li><strong>Generic Notion templates</strong> give you a table and call it a tracker \u2014 no stacking framework, no challenges, no pattern insights</li><li><strong>This template</strong> combines tracking + behavioral science + visual analytics in one workspace that adapts to your life</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other trackers help you build a habit. This one is engineered so building habits cascades into transforming your identity, productivity, and entire life trajectory.</p>',
             link: '#'
         },
         'debt-snowball': {
             emoji: '\u{1F4B0}',
             title: 'Debt Snowball Calculator',
             dbCount: 'Notion \u00B7 2 databases \u00B7 Proven payoff strategy',
-            description: 'Take control of your debt using the proven Snowball Method. Track every payment, allocate your budget strategically, and watch your net worth grow as each debt falls. Includes payment scheduling, interest tracking, and milestone celebrations.',
-            value: 'Debt feels overwhelming when you see it as one giant number. This template breaks it into a systematic, ordered attack plan. Paying off your smallest debt first creates psychological momentum \u2014 an Nth-order effect where each win fuels the motivation to tackle the next.',
-            unique: 'Automated snowball sequencing that recalculates as debts are paid off. Built-in net worth tracker so you see the full picture. Budget allocation views that show exactly where every dollar goes. Visual progress bars that make debt payoff genuinely motivating.',
+            hook: 'Your debt has a plan for your money. It\u2019s time you had a better one.',
+            audience: 'Anyone carrying multiple debts \u2014 credit cards, student loans, car payments, medical bills. Whether you owe $5,000 or $150,000, if looking at your total balance makes your stomach drop, this system was designed for exactly that feeling.',
+            problem: 'You\u2019re making minimum payments on everything and watching balances barely move. The total number feels insurmountable, so you avoid thinking about it. Meanwhile, interest compounds silently, and every month you lose money to a system designed to keep you paying forever.',
+            description: '<ul><li><strong>Debt Inventory Database</strong> \u2014 catalog every debt with balance, interest rate, minimum payment, and payoff priority</li><li><strong>Snowball Sequencing</strong> \u2014 automatically orders debts from smallest to largest balance for maximum psychological momentum</li><li><strong>Payment Tracker</strong> \u2014 log every payment and watch balances shrink in real time</li><li><strong>Net Worth Monitor</strong> \u2014 see your total financial picture improve as debts fall off</li><li><strong>Budget Allocation View</strong> \u2014 visualize exactly where every dollar goes each month</li><li><strong>Milestone Celebrations</strong> \u2014 built-in progress markers that keep motivation high through the long payoff journey</li></ul>',
+            beginnerMode: 'List your debts, follow the guided snowball order, and log payments. The template tells you exactly which debt to attack next and how much to pay \u2014 zero guesswork.',
+            advancedMode: 'Compare snowball vs. avalanche strategies, model different payment scenarios, track interest saved, and build a complete financial timeline toward debt-free status.',
+            value: '<p>This template implements <strong>Dave Ramsey\u2019s Debt Snowball Method</strong>, which prioritizes paying off the smallest balance first regardless of interest rate. Critics call it mathematically suboptimal \u2014 but research from Northwestern University\u2019s Kellogg School shows that <strong>people who use the snowball method are 14% more likely to eliminate their debt entirely</strong>.</p><p style="margin-top:0.75rem">Why? Because debt payoff is a <strong>behavioral problem</strong>, not a math problem. The quick wins from eliminating small debts trigger <strong>dopamine release</strong> and create what psychologists call a <strong>progress principle</strong> effect \u2014 visible progress is the single strongest motivator for sustained effort. This template is engineered around that science.</p><p style="margin-top:0.75rem">That\u2019s <strong>Nth-order thinking</strong> applied to personal finance: each eliminated debt (first order) frees up cash flow (second order), which accelerates the next payoff (third order), which eventually unlocks investing and wealth-building. One payment at a time, the entire financial trajectory changes.</p>',
+            unique: '<p>Spreadsheets can do debt math. But they can\u2019t keep you motivated at month seven when the initial excitement has faded.</p><ul><li><strong>Debt payoff apps</strong> (Undebt.it, Debt Payoff Planner) give you a calculator with no workspace context</li><li><strong>Spreadsheet templates</strong> require manual formulas and offer no visual momentum</li><li><strong>This template</strong> combines the mathematical plan with the psychological system \u2014 visual progress, milestone rewards, net worth tracking, and budget allocation in one workspace that makes you <em>want</em> to make payments</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other tools help you make payments. This one is engineered so each payment triggers a cascade \u2014 freed cash flow, accelerated payoffs, and eventually wealth-building.</p>',
             link: '#'
         },
         'student-command': {
             emoji: '\u{1F393}',
             title: 'Student Command Center',
             dbCount: 'Notion \u00B7 3 databases \u00B7 Complete academic hub',
-            description: 'Your all-in-one academic headquarters. Track courses, manage assignments with deadlines, calculate your GPA in real time, and access proven study techniques. Everything a student needs in one organized workspace.',
-            value: 'Academic success isn\'t just about studying harder \u2014 it\'s about systematic organization. When your assignments, deadlines, and exam prep are all visible in one workspace, you stop missing things. That reduced stress cascades into better focus, better grades, and more free time.',
-            unique: 'Real-time GPA calculator that updates as you log grades. Built-in study technique library with Pomodoro, spaced repetition, and active recall methods. Three databases for courses, assignments, and exams \u2014 everything in one academic hub. Deadline views that prevent last-minute panic.',
+            hook: 'The students who get the best grades aren\u2019t the smartest. They\u2019re the most organized.',
+            audience: 'College and university students at any level \u2014 freshmen overwhelmed by the jump from high school, upperclassmen juggling heavy course loads, and graduate students managing research alongside coursework. Also built for competitive students who refuse to leave their GPA to chance.',
+            problem: 'Your assignments live in five different apps. You\u2019ve missed deadlines because you forgot to check a syllabus. Your GPA is a mystery until grades post. And every semester, you swear you\u2019ll be more organized \u2014 then fall back into the same scramble by week three.',
+            description: '<ul><li><strong>Course Database</strong> \u2014 track every course with professor, schedule, credits, grade, and linked assignments</li><li><strong>Assignment Manager</strong> \u2014 deadlines, priority levels, completion status, and submission tracking across all courses</li><li><strong>Exam Tracker</strong> \u2014 exam dates, study plans, and grade logging in one view</li><li><strong>Real-Time GPA Calculator</strong> \u2014 updates automatically as you log grades so you always know where you stand</li><li><strong>Study Technique Library</strong> \u2014 built-in guides for Pomodoro, spaced repetition, active recall, and Feynman technique</li><li><strong>Deadline Calendar View</strong> \u2014 see every upcoming due date across all courses in one visual timeline</li></ul>',
+            beginnerMode: 'Add your courses, enter assignment deadlines, and follow the weekly review checklist. The template organizes everything and alerts you to what\u2019s due next \u2014 just keep it updated.',
+            advancedMode: 'Track GPA targets by course, implement spaced repetition schedules, analyze time-per-assignment patterns, and run end-of-semester performance reviews to optimize your approach each term.',
+            value: '<p>This system is built on research showing that <strong>external cognitive systems</strong> \u2014 structured places to offload information \u2014 dramatically reduce <strong>cognitive load</strong> and free up working memory for actual learning. The built-in study techniques draw from decades of learning science:</p><ul><li><strong>Spaced Repetition</strong> (Ebbinghaus, 1885) \u2014 reviewing material at increasing intervals improves long-term retention by up to 200%</li><li><strong>Active Recall</strong> (Roediger & Karpicke, 2006) \u2014 testing yourself is more effective than re-reading by a factor of 2-3x</li><li><strong>Pomodoro Technique</strong> (Cirillo) \u2014 focused 25-minute blocks prevent burnout and maintain deep concentration</li></ul><p style="margin-top:0.75rem">This is <strong>Nth-order thinking</strong> applied to academics: getting organized (first order) reduces anxiety (second order), which frees cognitive bandwidth for deeper learning (third order), which improves grades, which opens doors to better opportunities for the rest of your career.</p>',
+            unique: '<p>Your university\u2019s LMS shows deadlines for one class at a time. Your calendar shows dates but not priorities. Neither tracks your GPA or teaches you how to study.</p><ul><li><strong>University LMS systems</strong> (Canvas, Blackboard) are built for professors, not students</li><li><strong>Planner apps</strong> (Todoist, Google Calendar) track dates but don\u2019t understand academic context</li><li><strong>This template</strong> unifies courses, assignments, exams, GPA tracking, and proven study methods into one command center that makes academic success systematic, not accidental</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other tools help you track assignments. This one is engineered so getting organized cascades into reduced stress, deeper learning, better grades, and stronger career prospects.</p>',
             link: '#'
         },
         'content-creator': {
             emoji: '\u{1F3AC}',
             title: 'Content Creator Hub',
             dbCount: 'Notion \u00B7 3 databases \u00B7 Multi-platform management',
-            description: 'Manage your entire content operation across platforms. Track your content pipeline from idea to published, maintain an ideas bank that never runs dry, manage brand deals and sponsorships, and monitor analytics in one place.',
-            value: 'Content creation fails when ideas live in your head and workflows live in scattered tools. This template creates a single source of truth where every idea flows through a pipeline, brand deals are tracked professionally, and analytics inform your next move. The Nth-order effect: consistent publishing builds audience, which attracts deals, which funds better content.',
-            unique: 'Multi-platform pipeline tracking for YouTube, TikTok, Instagram, blog, and podcast. Ideas bank with tagging and priority scoring. Brand deals tracker with payment status and deliverables. Three purpose-built databases that turn content chaos into a professional operation.',
+            hook: 'The creators who win aren\u2019t more talented. They have a system that never lets a good idea die.',
+            audience: 'YouTubers, TikTokers, podcasters, bloggers, newsletter writers, and multi-platform creators at any stage \u2014 from your first 100 followers to established creators managing brand partnerships. If you create content on more than one platform, you need this.',
+            problem: 'Your best ideas are scattered across Notes apps, voice memos, and screenshots you\u2019ll never find again. You post inconsistently because there\u2019s no pipeline. Brand deals slip through the cracks. And you spend more time managing the chaos than actually creating.',
+            description: '<ul><li><strong>Content Pipeline Database</strong> \u2014 track every piece from idea \u2192 draft \u2192 production \u2192 published with status, platform, and publish date</li><li><strong>Ideas Bank</strong> \u2014 capture ideas instantly with tags, priority scores, and platform fit so nothing gets lost</li><li><strong>Brand Deals Tracker</strong> \u2014 manage sponsorships with deliverables, payment status, deadlines, and contact info</li><li><strong>Multi-Platform Views</strong> \u2014 filtered views for YouTube, TikTok, Instagram, blog, podcast, and newsletter</li><li><strong>Analytics Tracking</strong> \u2014 log performance metrics to identify what resonates and double down</li><li><strong>Content Calendar</strong> \u2014 visual publishing schedule across all platforms</li></ul>',
+            beginnerMode: 'Start by dumping all your ideas into the Ideas Bank, then move your next 5 pieces into the pipeline. Follow the weekly content planning routine to build your first consistent publishing schedule.',
+            advancedMode: 'Build content flywheels across platforms, track ROI on brand deals, analyze performance trends, implement batch production workflows, and run quarterly content audits to refine your strategy.',
+            value: '<p>This template implements the <strong>Content Flywheel</strong> concept \u2014 every piece of content feeds the next. A YouTube video becomes a blog post, becomes social clips, becomes a newsletter topic. The system also leverages <strong>batching research</strong> from productivity science: grouping similar tasks (ideation, production, editing) into dedicated blocks reduces context-switching costs by up to 40%.</p><p style="margin-top:0.75rem">The Ideas Bank applies the <strong>capture habit</strong> from David Allen\u2019s GTD methodology: when you trust your system to hold every idea, your creative mind stops anxiously hoarding and starts freely generating.</p><p style="margin-top:0.75rem">This is <strong>Nth-order thinking</strong> applied to content: one piece of content (first order) repurposed across platforms (second order) builds cumulative authority (third order), which attracts brand deals, which fund better production, which grows your audience further. The flywheel <em>is</em> the Nth-order effect.</p>',
+            unique: '<p>Social media scheduling tools (Buffer, Hootsuite) handle publishing but don\u2019t manage your creative process. Project management tools (Trello, Asana) don\u2019t understand content workflows.</p><ul><li><strong>Scheduling tools</strong> handle the last mile but ignore ideation, production, and brand deals</li><li><strong>Project management tools</strong> are generic \u2014 they don\u2019t have content-specific fields like platform, format, or analytics</li><li><strong>This template</strong> covers the entire content lifecycle from spark of an idea to published post to brand deal payment, all in one workspace that grows with your creator career</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other tools help you publish content. This one is engineered so consistent publishing cascades into audience growth, brand authority, and a self-sustaining creator business.</p>',
             link: '#'
         },
         'job-hunt': {
             emoji: '\u{1F4BC}',
             title: 'Job Hunt Dashboard',
             dbCount: 'Notion \u00B7 2+ databases \u00B7 Strategic job search',
-            description: 'Transform your job search from chaotic applications into a strategic campaign. Track every application, prepare for interviews with structured prep sheets, build your networking CRM, and research salary ranges \u2014 all in one dashboard.',
-            value: 'Job hunting is stressful because it feels uncontrollable. This template gives you control. When applications are tracked, follow-ups are scheduled, and interview prep is systematic, you perform better at every stage. The Nth-order effect: better organization leads to better interviews, stronger offers, and higher starting salaries.',
-            unique: 'Application status pipeline with visual tracking. Interview prep templates with STAR method frameworks. Built-in networking CRM to track contacts and follow-ups. Salary research tracker to negotiate with confidence.',
+            hook: '80% of jobs are filled through networking. If your job search is just applying online, you\u2019re playing a losing game.',
+            audience: 'Active job seekers at every level \u2014 new graduates entering the market, mid-career professionals seeking advancement, and career changers navigating unfamiliar industries. Whether you\u2019re applying to 10 or 100 positions, a chaotic search costs you opportunities.',
+            problem: 'You\u2019re applying to jobs through a fog. Applications disappear into portals with no follow-up system. You prep for interviews at the last minute with no structured framework. You meet people who could help your career, then lose their contact info. And you have no idea if the salary they offer is fair.',
+            description: '<ul><li><strong>Application Pipeline</strong> \u2014 track every application with company, role, status (Applied \u2192 Phone Screen \u2192 Interview \u2192 Offer), and follow-up dates</li><li><strong>Interview Prep Sheets</strong> \u2014 structured STAR method templates for behavioral questions with space for company research and role-specific preparation</li><li><strong>Networking CRM</strong> \u2014 track contacts, conversations, referral status, and follow-up cadences</li><li><strong>Salary Research Tracker</strong> \u2014 log compensation data by company and role to negotiate from a position of knowledge</li><li><strong>Follow-Up Scheduler</strong> \u2014 automated reminders so no application or connection falls through the cracks</li><li><strong>Weekly Job Search Review</strong> \u2014 structured reflection on what\u2019s working and what needs to change</li></ul>',
+            beginnerMode: 'Start by logging your target companies and open applications. Follow the guided weekly job search routine and use the interview prep template before each conversation. The system keeps you on track.',
+            advancedMode: 'Build a strategic networking map, track application conversion rates by channel, implement salary negotiation frameworks, and analyze your pipeline to identify where candidates stall and how to break through.',
+            value: '<p>This system applies <strong>Robert Cialdini\u2019s principle of reciprocity</strong> to job searching: the networking CRM helps you give value to contacts first (sharing articles, making introductions), which naturally creates a sense of obligation that leads to referrals and opportunities.</p><p style="margin-top:0.75rem">The interview prep system uses the <strong>STAR method</strong> (Situation, Task, Action, Result) \u2014 the format that hiring managers are trained to evaluate. Candidates who use structured storytelling in interviews receive <strong>significantly higher ratings</strong> than those who answer off the cuff, according to industrial-organizational psychology research.</p><p style="margin-top:0.75rem">This is <strong>Nth-order thinking</strong> applied to careers: systematic preparation (first order) leads to stronger interviews (second order), which yields better offers (third order), which compounds into a higher salary baseline for the rest of your career. The difference between a scattered and a strategic job search can be worth hundreds of thousands of dollars over a lifetime.</p>',
+            unique: '<p>Job boards get you in the door. But they don\u2019t help you prepare, follow up, network, or negotiate \u2014 the activities that actually determine whether you get hired and at what salary.</p><ul><li><strong>Job boards</strong> (LinkedIn, Indeed) track applications but nothing else</li><li><strong>ATS-focused tools</strong> optimize your resume but ignore the human side of hiring</li><li><strong>This template</strong> manages the complete job search campaign \u2014 applications, networking, interview prep, salary research, and follow-ups \u2014 so you\u2019re not just applying, you\u2019re strategically positioning yourself to win</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other tools help you apply. This one is engineered so systematic preparation cascades into stronger interviews, better offers, and a higher salary baseline that compounds for decades.</p>',
             link: '#'
         },
         'budget-tracker': {
             emoji: '\u{1F4CA}',
             title: 'Budget & Expense Tracker',
             dbCount: 'Notion \u00B7 2 databases \u00B7 Complete financial control',
-            description: 'Take complete control of your money with transaction logging, subscription auditing, 50/30/20 budgeting, and savings goal tracking. See exactly where your money goes and make every dollar intentional.',
-            value: 'Financial freedom starts with visibility. Most people have no idea where 30% of their income goes. This template surfaces that invisible spending and turns it into conscious choices. The Nth-order effect: awareness drives better spending, which accelerates savings, which unlocks investment opportunities.',
-            unique: 'Subscription audit view that surfaces forgotten recurring charges. Pre-built 50/30/20 budget framework with automatic category allocation. Savings goal tracker with visual progress. Two databases for transactions and subscriptions, organized for instant financial clarity.',
+            hook: 'Quick: where does 30% of your income go each month? If you can\u2019t answer that in 5 seconds, you need this template.',
+            audience: 'Young professionals, recent graduates, freelancers, and anyone who earns a decent income but can\u2019t figure out why there\u2019s nothing left at the end of the month. If you\u2019ve ever checked your bank balance and thought "where did it all go?" \u2014 this is for you.',
+            problem: 'You have invisible money leaks. Forgotten subscriptions you signed up for during a free trial. Impulse purchases that feel small but add up to hundreds. A vague sense that you should be saving more but no clarity on what to cut. Your money disappears because you can\u2019t see where it goes.',
+            description: '<ul><li><strong>Transaction Database</strong> \u2014 log every expense with category, amount, date, and payment method for total financial visibility</li><li><strong>Subscription Audit View</strong> \u2014 surface every recurring charge in one list so forgotten subscriptions can\u2019t hide</li><li><strong>50/30/20 Budget Framework</strong> \u2014 pre-built allocation system (50% needs, 30% wants, 20% savings) based on Senator Elizabeth Warren\u2019s proven framework</li><li><strong>Category Breakdown</strong> \u2014 see exactly how much you spend on food, transport, entertainment, and every other category</li><li><strong>Savings Goal Tracker</strong> \u2014 set targets and track progress toward emergency funds, vacations, or major purchases</li><li><strong>Monthly Financial Review</strong> \u2014 guided prompts to assess spending patterns and adjust next month\u2019s plan</li></ul>',
+            beginnerMode: 'Start by logging expenses for one week and listing all subscriptions. The template automatically categorizes spending and shows you where your money goes \u2014 just keep logging.',
+            advancedMode: 'Implement the full 50/30/20 framework, set savings automation targets, track net savings rate over time, run subscription ROI audits, and build a rolling 3-month spending trend analysis.',
+            value: '<p>This template applies principles from <strong>behavioral economics</strong>: making spending visible fundamentally changes how you spend. Research by Prelec and Simester at MIT showed that people spend up to <strong>83% more</strong> when using credit cards vs. cash \u2014 because the pain of payment is invisible. This template restores that visibility.</p><p style="margin-top:0.75rem">The 50/30/20 framework comes from <strong>Elizabeth Warren\u2019s <em>All Your Worth</em></strong> and is recommended by the Consumer Financial Protection Bureau. It works because it\u2019s simple enough to follow and flexible enough to adapt \u2014 unlike rigid budgets that collapse the first week.</p><p style="margin-top:0.75rem">This is <strong>Nth-order thinking</strong> applied to money: financial visibility (first order) changes spending behavior (second order), which accelerates savings (third order), which unlocks investing and compound growth. One template doesn\u2019t just organize your budget \u2014 it reshapes your entire financial trajectory.</p>',
+            unique: '<p>Banking apps show you what you spent. They don\u2019t help you understand <em>why</em> you spent it or build a system to change the pattern.</p><ul><li><strong>Banking apps</strong> (Mint, YNAB) auto-categorize but give you no actionable framework</li><li><strong>Spreadsheet budgets</strong> require constant manual maintenance and die within weeks</li><li><strong>This template</strong> combines transaction tracking, subscription auditing, a proven budget framework, and guided monthly reviews in one workspace that turns financial awareness into financial control</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other tools help you track spending. This one is engineered so financial visibility cascades into behavior change, accelerated savings, and long-term wealth.</p>',
             link: '#'
         },
         'travel-planner': {
             emoji: '\u2708\uFE0F',
             title: 'Travel Planner',
             dbCount: 'Notion \u00B7 3 databases \u00B7 Trip planning made effortless',
-            description: 'Plan trips with detailed day-by-day itineraries, travel budgets, a lifetime bucket list, and reusable packing lists. From weekend getaways to international adventures, organize every detail in one beautiful workspace.',
-            value: 'Great trips don\'t happen by accident \u2014 they\'re designed. When your itinerary, budget, and bucket list are all in one place, you travel lighter, spend smarter, and experience more. The Nth-order effect: well-planned trips create better memories, which fuel your motivation to explore more of the world.',
-            unique: 'Day-by-day itinerary builder with time blocks and location links. Budget tracker that monitors spending by category. Lifetime bucket list with priority ranking. Reusable packing list templates by trip type.',
+            hook: 'The best trips aren\u2019t spontaneous. They\u2019re designed so well that they feel effortless.',
+            audience: 'Weekend warriors, international adventurers, family trip planners, digital nomads, and anyone who\u2019s ever come home from a trip thinking "I wish I\u2019d planned that better." Whether it\u2019s a 3-day city break or a 30-day backpacking route, this handles it.',
+            problem: 'Your trip research lives in 20 browser tabs, a scattered Notes doc, and a text thread you can\u2019t find. You overspend because you never set a budget. You miss must-see spots because your itinerary was a vague list of "maybe" locations. And packing? You always forget something.',
+            description: '<ul><li><strong>Trip Database</strong> \u2014 organize every trip with dates, destination, budget, status, and linked itineraries</li><li><strong>Day-by-Day Itinerary Builder</strong> \u2014 plan each day with time blocks, activities, locations, estimated costs, and notes</li><li><strong>Travel Budget Tracker</strong> \u2014 set a trip budget and track spending by category (flights, accommodation, food, activities)</li><li><strong>Bucket List</strong> \u2014 lifetime destination list with priority ranking, estimated costs, and best travel seasons</li><li><strong>Packing List Templates</strong> \u2014 reusable lists by trip type (beach, city, hiking, business) so you never forget essentials</li><li><strong>Booking & Confirmation Hub</strong> \u2014 store flight numbers, hotel confirmations, and reservation details in one place</li></ul>',
+            beginnerMode: 'Pick your next trip, use the packing list template, and fill in the day-by-day itinerary with your must-do activities. The template keeps everything organized without overwhelming you.',
+            advancedMode: 'Build multi-city routing plans, track spending against budget in real time, maintain a scored bucket list with seasonal optimization, and create reusable trip templates for repeat destinations.',
+            value: '<p>This template leverages the <strong>peak-end rule</strong> from Nobel laureate Daniel Kahneman\u2019s research: your memory of a trip is disproportionately shaped by its peak moment and its ending. The itinerary builder helps you <em>design</em> those peaks deliberately rather than leaving them to chance.</p><p style="margin-top:0.75rem">Pre-trip planning also reduces <strong>decision fatigue</strong> during the trip itself. Research shows we make worse choices as the day progresses and our willpower depletes. A well-planned itinerary means your best decisions are made in advance, when your judgment is sharpest.</p><p style="margin-top:0.75rem">This is <strong>Nth-order thinking</strong> applied to travel: intentional planning (first order) creates richer experiences (second order), which become core memories that strengthen relationships and fuel motivation (third order), which compounds into a life defined by meaningful adventure rather than vague regret.</p>',
+            unique: '<p>Google Docs and TripIt can store trip information. But they don\u2019t help you <em>design</em> a great experience or stick to a budget while doing it.</p><ul><li><strong>TripIt and travel apps</strong> organize confirmations but don\u2019t help with itinerary design or budgeting</li><li><strong>Google Docs/Sheets</strong> are blank canvases with no structure \u2014 you\u2019re building from zero every trip</li><li><strong>This template</strong> gives you reusable structure for itineraries, budgets, packing, and bookings \u2014 so every trip is better planned than the last, and the system gets smarter as you travel more</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other tools help you store trip details. This one is engineered so intentional planning cascades into richer experiences, stronger memories, and a life defined by meaningful adventure.</p>',
             link: '#'
         },
         'second-brain': {
             emoji: '\u{1F9E0}',
             title: 'Second Brain / Knowledge Vault',
             dbCount: 'Notion \u00B7 2 databases \u00B7 Personal knowledge management',
-            description: 'Build your personal knowledge management system. Capture ideas instantly, maintain a curated reading list, and use progressive summarization to turn raw information into actionable wisdom.',
-            value: 'Information is only valuable when you can find it and use it. This template applies the Second Brain methodology so nothing falls through the cracks. The Nth-order effect: better knowledge capture leads to better connections between ideas, which sparks creativity and better decision-making across every area of your life.',
-            unique: 'Quick-capture inbox that eliminates friction. Progressive summarization workflow for distilling key insights. Reading list with status tracking and key takeaway fields. Two databases for knowledge capture and reading tracking, organized for easy retrieval when you need it.',
+            hook: 'You\u2019ve had a brilliant idea at 2am, on a walk, in the shower. How many of those ideas do you still have?',
+            audience: 'Lifelong learners, researchers, writers, knowledge workers, and anyone who consumes more information than they can remember. If you have 500+ bookmarks you\u2019ll never revisit, a notes app full of disconnected fragments, and a nagging feeling that you\u2019ve forgotten more than you\u2019ve retained \u2014 this is your system.',
+            problem: 'You read articles, watch videos, listen to podcasts, and have insights constantly \u2014 but none of it sticks. Your knowledge is scattered across apps with no connection between ideas. When you need that one concept you read about three months ago, it\u2019s gone. You\u2019re consuming endlessly but retaining almost nothing.',
+            description: '<ul><li><strong>Quick-Capture Inbox</strong> \u2014 frictionless entry point for ideas, quotes, links, and insights from any source</li><li><strong>Knowledge Database</strong> \u2014 organize captured items with tags, categories, source links, and progressive summarization layers</li><li><strong>Reading List</strong> \u2014 track books, articles, and resources with status (To Read \u2192 Reading \u2192 Finished), key takeaways, and ratings</li><li><strong>Progressive Summarization</strong> \u2014 layered highlighting system that distills raw notes into actionable insights over time</li><li><strong>Connection Views</strong> \u2014 surface related ideas across your vault so knowledge compounds through unexpected links</li><li><strong>Weekly Review Prompts</strong> \u2014 guided process to process your inbox, connect ideas, and surface forgotten gems</li></ul>',
+            beginnerMode: 'Start by capturing 3 ideas per day into the inbox. Once a week, process the inbox by tagging and filing. The template teaches you the capture habit that forms the foundation of a Second Brain.',
+            advancedMode: 'Implement full progressive summarization across your vault, build a Zettelkasten-style connection network, track knowledge by domain, and develop a personal publishing pipeline from notes to finished work.',
+            value: '<p>This template implements <strong>Tiago Forte\u2019s Building a Second Brain (CODE)</strong> framework: Capture, Organize, Distill, Express. It also draws from <strong>Niklas Luhmann\u2019s Zettelkasten</strong> method \u2014 the note-linking system that helped one sociologist produce 70 books and 400 academic papers over his career.</p><p style="margin-top:0.75rem">The key insight from cognitive science: your brain is optimized for <strong>having ideas, not storing them</strong>. When you externalize your knowledge into a trusted system, you free up cognitive resources for creativity, pattern recognition, and original thinking \u2014 the things human minds actually excel at.</p><p style="margin-top:0.75rem">This is <strong>Nth-order thinking</strong> applied to knowledge: capturing one idea (first order) creates unexpected connections to other ideas (second order), which sparks original insights (third order), which improve your decisions across every domain of life. Your knowledge doesn\u2019t just accumulate \u2014 it compounds.</p>',
+            unique: '<p>Note-taking apps give you infinite blank pages. But more pages doesn\u2019t mean more knowledge \u2014 it often means more chaos.</p><ul><li><strong>Note apps</strong> (Apple Notes, Evernote) let you capture but provide no framework for organizing or retrieving</li><li><strong>Read-later apps</strong> (Pocket, Instapaper) save articles but don\u2019t help you extract and connect insights</li><li><strong>This template</strong> provides the complete knowledge management lifecycle \u2014 capture, organize, distill, and connect \u2014 so your notes actually become usable wisdom instead of a digital graveyard</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other tools help you save notes. This one is engineered so captured knowledge cascades into unexpected connections, original insights, and better decisions across every domain.</p>',
             link: '#'
         },
         'personal-crm': {
             emoji: '\u{1F91D}',
             title: 'Personal CRM \u2014 Relationship Manager',
             dbCount: 'Notion \u00B7 3 databases \u00B7 Free',
-            description: 'Your relationships are your most valuable asset. Track your entire personal and professional network with a Contacts database, Interaction Log, and Important Dates tracker. Never forget a follow-up, miss a birthday, or wonder "what did we talk about last time?" again.',
-            value: 'Relationships fade not because you don\u0027t care, but because you don\u0027t have a system. This template turns good intentions into consistent action. The Nth-order effect: following up consistently builds stronger relationships, which creates more opportunities, which compounds into a richer personal and professional life.',
-            unique: 'Circle-based contact tiers (Inner Circle to Distant) with recommended follow-up cadences. Interaction Log that serves as your relationship memory. Important Dates tracker for birthdays, anniversaries, and milestones. Built-in Relationship Playbook with follow-up frameworks, conversation starters, and monthly review checklists. Completely free \u2014 our gift to get you started with Nth-order thinking.',
+            hook: 'You don\u2019t lose relationships because you stop caring. You lose them because you don\u2019t have a system for caring consistently.',
+            audience: 'Professionals building their network, freelancers managing client relationships, people who\u2019ve moved cities and want to maintain long-distance friendships, and anyone who has ever thought "I should really reach out to them" and then didn\u2019t. This template is also for introverts who find relationship maintenance overwhelming without structure.',
+            problem: 'You have good intentions but no system. You think about old friends and colleagues but don\u2019t follow up. You meet great people at events and lose their information. Birthdays pass without acknowledgment. Important relationships quietly fade \u2014 not from neglect, but from the absence of a reminder to show up.',
+            description: '<ul><li><strong>Contacts Database</strong> \u2014 your complete relationship network organized by Circle tier (Inner Circle, Close, Active, Casual, Distant) with contact details, notes, and tags</li><li><strong>Interaction Log</strong> \u2014 record every meaningful conversation, coffee meeting, email exchange, and favor \u2014 your external relationship memory</li><li><strong>Important Dates Tracker</strong> \u2014 birthdays, anniversaries, work milestones, and custom dates with upcoming date views</li><li><strong>Follow-Up Cadences</strong> \u2014 recommended contact frequency by tier (Inner Circle: weekly, Distant: quarterly) so no one slips away</li><li><strong>Relationship Playbook</strong> \u2014 built-in frameworks for follow-up messages, conversation starters, and monthly relationship reviews</li><li><strong>Last Contact Views</strong> \u2014 instantly see who you haven\u2019t reached out to in too long</li></ul>',
+            beginnerMode: 'Add your 20 most important contacts, set their Circle tier, and log your next interaction with each. Follow the weekly review to stay on top of follow-ups \u2014 the template does the remembering for you.',
+            advancedMode: 'Build a comprehensive network map, implement strategic relationship development plans, track reciprocity balance, analyze your network for gaps, and run quarterly relationship audits.',
+            value: '<p>This template is grounded in <strong>Robin Dunbar\u2019s research</strong> on social circles: humans can meaningfully maintain roughly 150 relationships, but only 5 are in your innermost circle, 15 in the next, and 50 in the third. The Circle tier system maps directly to Dunbar\u2019s layers, giving each relationship the appropriate level of attention.</p><p style="margin-top:0.75rem">The follow-up system leverages <strong>Cialdini\u2019s principle of reciprocity</strong>: small, consistent acts of connection (a birthday message, a shared article, a quick check-in) create disproportionate goodwill. Relationships are compounding assets \u2014 this template ensures you invest in them regularly.</p><p style="margin-top:0.75rem">This is <strong>Nth-order thinking</strong> applied to relationships: one follow-up message (first order) strengthens a connection (second order), which leads to an unexpected referral or opportunity (third order), which opens doors you couldn\u2019t have predicted. Relationships are the ultimate compounding asset \u2014 and this template ensures you never stop investing.</p>',
+            unique: '<p>Your phone\u2019s contact list stores numbers. LinkedIn stores profiles. Neither helps you actually <em>maintain</em> relationships.</p><ul><li><strong>Phone contacts</strong> have no interaction history, no follow-up reminders, no relationship context</li><li><strong>LinkedIn</strong> is a public-facing network, not a personal relationship management tool</li><li><strong>CRM software</strong> (HubSpot, Salesforce) is designed for sales pipelines, not personal relationships</li><li><strong>This template</strong> is purpose-built for human connection \u2014 and it\u2019s completely free because we believe strong relationships are the foundation everything else is built on</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other tools store contact info. This one is engineered so consistent follow-ups cascade into deeper trust, unexpected opportunities, and a network that compounds in value over time.</p>',
             link: '#'
         },
         'life-os': {
             emoji: '\u{1F3E0}',
             title: 'Life OS \u2014 Personal Command Center',
             dbCount: 'Notion \u00B7 7 databases \u00B7 Flagship',
-            description: 'The ultimate personal operating system. Manage your goals, projects, habits, journal, workout log, and personal CRM in one unified dashboard. This is where all your systems come together.',
-            value: 'This is Nth-order thinking made tangible. When your goals, projects, habits, and daily actions all live in one workspace, everything compounds. Your workout log tracks your energy. Your journal surfaces patterns. Your CRM keeps relationships strong. Every system, organized together, amplifies the others.',
-            unique: 'Seven purpose-built databases that form a complete life operating system. Goals, projects, and habits organized in one workspace so daily tasks serve long-term vision. Built-in journal with weekly, monthly, and quarterly review prompts. Workout log, reading tracker, and personal CRM all in one unified dashboard. The flagship EvolvNth template.',
+            hook: 'Imagine opening one dashboard and seeing your goals, projects, habits, health, journal, and relationships \u2014 all talking to each other.',
+            audience: 'Ambitious individuals who are tired of managing their life across 7 different apps that don\u2019t communicate. Professionals, entrepreneurs, and self-improvement enthusiasts who want a unified system where tracking a workout, completing a project, and maintaining a relationship all feed into the same life picture.',
+            problem: 'Your goals live in one app, your habits in another, your journal in a third, your workouts in a fourth. None of them talk to each other. You can\u2019t see how your sleep affects your productivity, how your habits connect to your goals, or whether your daily actions actually serve your quarterly objectives. You\u2019re managing fragments of your life in isolation.',
+            description: '<ul><li><strong>Goals Dashboard</strong> \u2014 quarterly and annual goals with OKR-style key results and progress tracking</li><li><strong>Project Manager</strong> \u2014 active projects linked to goals with task breakdowns, deadlines, and status tracking</li><li><strong>Habit Tracker</strong> \u2014 daily habit logging with streak tracking and consistency scoring</li><li><strong>Daily Journal</strong> \u2014 structured entries with prompts for gratitude, reflection, energy levels, and weekly/monthly/quarterly reviews</li><li><strong>Workout Log</strong> \u2014 exercise tracking with type, duration, intensity, and energy correlation</li><li><strong>Reading Tracker</strong> \u2014 books and articles with status, ratings, and key takeaway fields</li><li><strong>Personal CRM</strong> \u2014 relationship management with contacts, interactions, and follow-up scheduling</li></ul>',
+            beginnerMode: 'Start with the Daily Journal and Habit Tracker \u2014 just two databases. Build the daily check-in habit first. Once it\u2019s automatic, expand into Goals, Projects, and the other systems at your own pace.',
+            advancedMode: 'Implement the full OKR framework, cross-reference habits against goal progress, correlate journal entries with productivity metrics, build quarterly review rituals, and optimize your life as an integrated system.',
+            value: '<p>This template brings together two proven methodologies: <strong>OKRs (Objectives and Key Results)</strong>, the goal-setting framework used by Intel, Google, and Amazon, and <strong>GTD (Getting Things Done)</strong> by David Allen, the system for turning overwhelm into organized action.</p><p style="margin-top:0.75rem">The real power is <strong>integration</strong>. Research on <strong>self-determination theory</strong> (Deci & Ryan) shows that progress toward meaningful goals is the strongest predictor of sustained motivation and well-being. When your daily habits, projects, and reflections are all visibly connected to your bigger goals, every action feels purposeful. That\u2019s not productivity \u2014 that\u2019s a fundamentally different way of living.</p><p style="margin-top:0.75rem">This is <strong>Nth-order thinking at its fullest expression</strong>: seven interconnected systems where a workout log informs your energy patterns, which optimizes your work schedule, which advances your projects, which achieves your quarterly goals. Every database amplifies the others. The cascade is the product.</p>',
+            unique: '<p>There are thousands of Notion templates. But almost none of them solve the real problem: <strong>your life is one system, and your tools should reflect that</strong>.</p><ul><li><strong>Individual templates</strong> give you one piece of the puzzle with no connection to the rest</li><li><strong>All-in-one apps</strong> (Notion, ClickUp) give you the platform but no structure \u2014 you start from a blank page</li><li><strong>This template</strong> is seven purpose-built databases engineered to work together, with built-in review cycles that surface insights across every area of your life. It\u2019s not a collection of tools \u2014 it\u2019s a <em>life operating system</em> where every piece amplifies the others</li></ul><p style="margin-top:0.75rem"><strong>Built with Nth-order design:</strong> other templates give you isolated tools. This one is engineered so seven interconnected systems cascade into each other \u2014 where a morning habit improves your energy, which boosts your project output, which advances your goals, which reshapes your entire trajectory.</p>',
             link: '#'
         }
     };
@@ -464,17 +584,39 @@
         document.getElementById('modal-emoji').textContent = product.emoji;
         document.getElementById('modal-title').textContent = product.title;
         document.getElementById('modal-db-count').textContent = product.dbCount;
-        document.getElementById('modal-description').textContent = product.description;
-        document.getElementById('modal-value').textContent = product.value;
-        document.getElementById('modal-unique').textContent = product.unique;
+        document.getElementById('modal-hook').textContent = product.hook;
+        document.getElementById('modal-audience').textContent = product.audience;
+        document.getElementById('modal-problem').textContent = product.problem;
+        document.getElementById('modal-description').innerHTML = product.description;
+        document.getElementById('modal-value').innerHTML = product.value;
+        document.getElementById('modal-unique').innerHTML = product.unique;
+
+        // Build dual mode cards
+        const modesHtml = '<div class="mode-card beginner"><h4 class="text-blue-400">\u{1F7E2} Beginner Mode</h4><p>' + product.beginnerMode + '</p></div>' +
+            '<div class="mode-card advanced"><h4 class="text-purple-400">\u{1F537} Advanced Mode</h4><p>' + product.advancedMode + '</p></div>';
+        document.getElementById('modal-modes').innerHTML = modesHtml;
+
+        // CTA button
         const cta = document.getElementById('modal-cta');
         cta.href = product.link;
-        cta.textContent = id === 'personal-crm' ? 'Get It Free' : 'Get This Template';
+        if (id === 'personal-crm') {
+            cta.textContent = 'Get It Free';
+            cta.className = 'inline-block w-full text-center px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all duration-300';
+        } else if (id === 'life-os') {
+            cta.textContent = 'Get the Flagship Template';
+            cta.className = 'inline-block w-full text-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300';
+        } else {
+            cta.textContent = 'Get This Template';
+            cta.className = 'inline-block w-full text-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300';
+        }
 
         const modal = document.getElementById('product-modal');
         modal.classList.remove('hidden');
         modal.classList.add('flex');
         document.body.classList.add('modal-open');
+
+        // Scroll modal content to top
+        modal.querySelector('.overflow-y-auto').scrollTop = 0;
     }
 
     function closeModal() {
