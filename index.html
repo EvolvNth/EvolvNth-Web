@@ -119,7 +119,8 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Cascading Systems</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">One action triggers the next. Our systems connect habits, goals, and projects so that progress in one area automatically accelerates every other area of your life.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">One action triggers the next. Our systems connect habits, goals, and projects so that progress in one area automatically accelerates every other area of your life.</p>
+                    <button onclick="openPillarModal('cascading')" class="text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors cursor-pointer">Learn More &rarr;</button>
                 </div>
 
                 <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
@@ -127,7 +128,8 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Nth-Order Thinking</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Most tools solve surface-level problems. We design for second, third, and Nth-order effects &mdash; so tracking a habit today reshapes your health, productivity, and finances tomorrow.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Most tools solve surface-level problems. We design for second, third, and Nth-order effects &mdash; so tracking a habit today reshapes your health, productivity, and finances tomorrow.</p>
+                    <button onclick="openPillarModal('nth-order')" class="text-purple-400 text-sm font-semibold hover:text-purple-300 transition-colors cursor-pointer">Learn More &rarr;</button>
                 </div>
 
                 <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
@@ -135,7 +137,8 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Built to Evolve</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Your life changes, and your tools should too. Every solution is modular, extensible, and designed to grow with you &mdash; from student to professional, side hustle to empire.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Your life changes, and your tools should too. Every solution is modular, extensible, and designed to grow with you &mdash; from student to professional, side hustle to empire.</p>
+                    <button onclick="openPillarModal('evolve')" class="text-emerald-400 text-sm font-semibold hover:text-emerald-300 transition-colors cursor-pointer">Learn More &rarr;</button>
                 </div>
             </div>
         </div>
@@ -299,6 +302,58 @@
         </div>
     </div>
 
+    <!-- Pillar Detail Modal -->
+    <div id="pillar-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closePillarModal()"></div>
+
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto glass-panel rounded-2xl p-8 md:p-10 z-10">
+            <!-- Close Button -->
+            <button onclick="closePillarModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+
+            <!-- Icon & Title -->
+            <div class="h-14 w-14 rounded-lg flex items-center justify-center mb-5 text-2xl" id="pillar-icon-wrapper">
+                <span id="pillar-icon"></span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-2" id="pillar-title"></h2>
+            <p class="text-gray-500 text-sm mb-6 uppercase tracking-wider font-semibold" id="pillar-subtitle"></p>
+
+            <!-- What This Means -->
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold uppercase tracking-wider mb-2" id="pillar-section1-label"></h3>
+                <p class="text-gray-300 leading-relaxed" id="pillar-explanation"></p>
+            </div>
+
+            <!-- How We Operate -->
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold uppercase tracking-wider mb-2" id="pillar-section2-label"></h3>
+                <p class="text-gray-300 leading-relaxed" id="pillar-operation"></p>
+            </div>
+
+            <!-- How It Benefits You -->
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold uppercase tracking-wider mb-2" id="pillar-section3-label"></h3>
+                <p class="text-gray-300 leading-relaxed" id="pillar-benefit"></p>
+            </div>
+
+            <!-- What Makes Us Different -->
+            <div class="mb-8">
+                <h3 class="text-sm font-semibold uppercase tracking-wider mb-2" id="pillar-section4-label"></h3>
+                <p class="text-gray-300 leading-relaxed" id="pillar-difference"></p>
+            </div>
+
+            <!-- CTA -->
+            <a href="#products" onclick="closePillarModal()" class="inline-block w-full text-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
+                See It in Action &rarr;
+            </a>
+        </div>
+    </div>
+
     <footer class="py-10 border-t border-gray-800/50 text-center text-gray-600 text-sm">
         <div class="flex justify-center gap-6 mb-4">
             <a href="#products" class="hover:text-gray-400 transition">Products</a>
@@ -429,8 +484,84 @@
         document.body.classList.remove('modal-open');
     }
 
+    // === PILLAR MODALS ===
+    const pillars = {
+        'cascading': {
+            icon: '\u26A1',
+            iconBg: 'bg-blue-500/10 border border-blue-500/20 text-blue-400',
+            color: 'text-blue-400',
+            title: 'Cascading Systems',
+            subtitle: 'Core Principle',
+            explanation: 'Most productivity tools treat each area of your life as a silo \u2014 one app for habits, another for goals, another for finances. Cascading Systems is our foundational belief that everything in your life is connected, and the best systems make those connections explicit. When you complete a habit, it should feed into a goal. When you track a budget, it should inform your life plan. When you log an interaction, it should strengthen a relationship. A cascading system means one action doesn\u2019t just check a box \u2014 it triggers a chain reaction of positive outcomes across every dimension of your life.',
+            operation: 'Every product we build is designed with interconnection at its core. Our templates don\u2019t just give you a database \u2014 they give you databases that talk to each other. Your Habit Tracker feeds into your Life OS goals. Your Budget Tracker surfaces patterns that reshape your financial strategy. Your Personal CRM reminds you to follow up, which strengthens relationships, which opens doors. We obsess over the links between systems because that\u2019s where the real value lives. We believe that a connected system is exponentially more valuable than the sum of its parts.',
+            benefit: 'You stop living in silos. Instead of managing 10 disconnected tools, you have one ecosystem where progress in any area automatically accelerates every other area. A morning workout improves your energy, which boosts your work output, which advances your career goals, which grows your income. That\u2019s not wishful thinking \u2014 that\u2019s a system designed to cascade. Our customers don\u2019t just get organized; they build momentum that compounds over weeks, months, and years.',
+            difference: 'Other template creators hand you a spreadsheet and call it a system. We engineer the connections between your data so that each piece amplifies the others. Most tools optimize for a single metric \u2014 we optimize for the relationships between metrics. That\u2019s why our flagship Life OS has seven interconnected databases, not seven separate ones. The cascade is the product.'
+        },
+        'nth-order': {
+            icon: '\u{1F4A1}',
+            iconBg: 'bg-purple-500/10 border border-purple-500/20 text-purple-400',
+            color: 'text-purple-400',
+            title: 'Nth-Order Thinking',
+            subtitle: 'Design Philosophy',
+            explanation: 'First-order thinking asks: "What happens if I do this?" Nth-order thinking asks: "What happens next? And after that? And after that?" It\u2019s the discipline of tracing consequences through multiple layers \u2014 the second, third, and Nth-order effects of every decision. Most tools are designed for first-order results: track a habit, log an expense, save a note. We design for the ripple effects. When you track a habit consistently, the second-order effect is behavioral change. The third-order effect is identity shift. The Nth-order effect is a fundamentally different life trajectory. That\u2019s what we build for.',
+            operation: 'Nth-order thinking is embedded in every design decision we make. When we build a Debt Snowball Calculator, we don\u2019t just help you pay off debt \u2014 we design the psychological momentum loop where each small win fuels motivation for the next, which accelerates the entire payoff timeline, which frees up income, which enables investing. When we build a Student Command Center, we don\u2019t just track assignments \u2014 we connect study techniques to courses to grades so that improving one study habit cascades into better performance across every class. We ask "and then what?" at every step of the design process.',
+            benefit: 'You get tools that are smarter than they look. On the surface, you\u2019re tracking habits or managing a budget. But underneath, the system is engineered to produce compounding results that most people don\u2019t see coming. Customers tell us they started with one template to solve one problem \u2014 and within months, they noticed improvements in areas they weren\u2019t even targeting. That\u2019s not an accident. That\u2019s Nth-order design doing exactly what it\u2019s supposed to do: creating outcomes that go far beyond the obvious.',
+            difference: 'The productivity space is flooded with tools that solve surface-level problems. Track this. Log that. Check this box. We\u2019re the only brand that explicitly designs for downstream effects. Every feature we add has to pass the Nth-order test: does this just solve the immediate problem, or does it create compounding value over time? If it only solves the surface problem, it doesn\u2019t ship. This philosophy is why our products feel different to use \u2014 they\u2019re not just organized, they\u2019re engineered to produce results that multiply.'
+        },
+        'evolve': {
+            icon: '\u{1F6E1}\uFE0F',
+            iconBg: 'bg-emerald-500/10 border border-emerald-500/20 text-emerald-400',
+            color: 'text-emerald-400',
+            title: 'Built to Evolve',
+            subtitle: 'Our Promise',
+            explanation: 'Your life at 20 looks nothing like your life at 30 or 40. You go from student to professional, from renting to owning, from single to partnered, from side hustle to business. Most tools are built for a snapshot in time \u2014 they work great for who you are today but become irrelevant as you grow. Built to Evolve is our commitment that every system we create is modular, extensible, and designed to grow with you. No tool should hold you back because you outgrew it. Your systems should be as ambitious as you are.',
+            operation: 'Modularity is a core engineering principle in everything we build. Our templates use consistent structures so you can add new databases, new views, and new workflows without breaking what already works. We design with expansion points \u2014 places where you can plug in new functionality as your needs change. A student using our Student Command Center today can graduate into our Job Hunt Dashboard and then into our Life OS without losing context or starting over. We also design our products to work independently or as a suite, so you\u2019re never locked into buying everything \u2014 but everything works better together.',
+            benefit: 'You invest once and benefit for years. As your life evolves, your systems evolve with you. You\u2019ll never hit a wall where your tool can\u2019t handle your new reality. Graduate from college? Your academic system transitions into a career system. Pay off your debt? Your financial tracker shifts to wealth building. Start a side project? Your Life OS absorbs it naturally. This adaptability means you build knowledge and data over time instead of starting from scratch every time life changes. Your systems become an asset that appreciates.',
+            difference: 'Most template creators build static products \u2014 one-size-fits-all solutions frozen in time. We build living systems. Our templates are designed with clear separation of concerns, consistent naming conventions, and documented structures so you can customize confidently. We don\u2019t just hand you a finished product; we give you a foundation that\u2019s engineered for extension. And as EvolvNth grows, we\u2019ll continue adding new products and integrations that plug into the ecosystem you\u2019ve already built. Your investment compounds \u2014 just like everything else we design.'
+        }
+    };
+
+    function openPillarModal(id) {
+        const pillar = pillars[id];
+        if (!pillar) return;
+
+        const wrapper = document.getElementById('pillar-icon-wrapper');
+        wrapper.className = 'h-14 w-14 rounded-lg flex items-center justify-center mb-5 text-2xl ' + pillar.iconBg;
+        document.getElementById('pillar-icon').textContent = pillar.icon;
+        document.getElementById('pillar-title').textContent = pillar.title;
+        document.getElementById('pillar-subtitle').textContent = pillar.subtitle;
+
+        document.getElementById('pillar-section1-label').textContent = 'What This Means';
+        document.getElementById('pillar-section1-label').className = 'text-sm font-semibold uppercase tracking-wider mb-2 ' + pillar.color;
+        document.getElementById('pillar-explanation').textContent = pillar.explanation;
+
+        document.getElementById('pillar-section2-label').textContent = 'How We Operate';
+        document.getElementById('pillar-section2-label').className = 'text-sm font-semibold uppercase tracking-wider mb-2 ' + pillar.color;
+        document.getElementById('pillar-operation').textContent = pillar.operation;
+
+        document.getElementById('pillar-section3-label').textContent = 'How It Benefits You';
+        document.getElementById('pillar-section3-label').className = 'text-sm font-semibold uppercase tracking-wider mb-2 ' + pillar.color;
+        document.getElementById('pillar-benefit').textContent = pillar.benefit;
+
+        document.getElementById('pillar-section4-label').textContent = 'What Makes Us Different';
+        document.getElementById('pillar-section4-label').className = 'text-sm font-semibold uppercase tracking-wider mb-2 ' + pillar.color;
+        document.getElementById('pillar-difference').textContent = pillar.difference;
+
+        const modal = document.getElementById('pillar-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.classList.add('modal-open');
+    }
+
+    function closePillarModal() {
+        const modal = document.getElementById('pillar-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.classList.remove('modal-open');
+    }
+
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeModal();
+        if (e.key === 'Escape') { closeModal(); closePillarModal(); }
     });
     </script>
 
