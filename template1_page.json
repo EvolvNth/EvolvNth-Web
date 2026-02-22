@@ -1,0 +1,46 @@
+{
+  "parent": {"type": "page_id", "page_id": "30e107f0-44d1-8014-abd0-c449748c499e"},
+  "icon": {"type": "emoji", "emoji": "\uD83C\uDFAF"},
+  "properties": {
+    "title": {
+      "title": [{"text": {"content": "Habit Tracker Pro"}}]
+    }
+  },
+  "children": [
+    {
+      "object": "block",
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [{"type": "text", "text": {"content": "Habit Tracker Pro"}, "annotations": {"bold": true}}]
+      }
+    },
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{"type": "text", "text": {"content": "Transform your daily routines into lasting habits. This comprehensive tracker helps you build consistency, monitor streaks, and achieve your personal development goals. Track habits across multiple categories, set priorities, and review your progress weekly and monthly."}, "annotations": {"italic": true, "color": "gray"}}]
+      }
+    },
+    {
+      "object": "block",
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "object": "block",
+      "type": "callout",
+      "callout": {
+        "icon": {"type": "emoji", "emoji": "\uD83D\uDCA1"},
+        "color": "blue_background",
+        "rich_text": [{"type": "text", "text": {"content": "Quick Start: "}, "annotations": {"bold": true}}, {"type": "text", "text": {"content": "Add your habits to the database below, set your frequency and priority, then check in daily to build your streaks. Use the Weekly Review section every Sunday to reflect on your progress."}}]
+      }
+    },
+    {
+      "object": "block",
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{"type": "text", "text": {"content": "My Habits"}}]
+      }
+    }
+  ]
+}

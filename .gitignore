@@ -1,0 +1,12 @@
+# Environment variables (contains API tokens)
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Windows artifacts
+NUL
+
+# Claude Code local settings
+.claude/
