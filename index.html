@@ -230,6 +230,17 @@
                     </div>
                 </button>
 
+                <button onclick="openModal('personal-crm')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer border border-emerald-500/20 relative">
+                    <span class="absolute top-4 right-4 px-2 py-0.5 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold tracking-widest uppercase rounded-full">Free</span>
+                    <div class="text-4xl mb-4">&#129309;</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">Personal CRM</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Never lose touch with the people who matter. Track relationships, follow-ups, interactions, and important dates.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-emerald-400 font-medium">Notion &middot; 3 databases &middot; Free</span>
+                        <span class="text-emerald-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">View Details &rarr;</span>
+                    </div>
+                </button>
+
                 <button onclick="openModal('life-os')" class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 text-left group cursor-pointer border border-blue-500/20">
                     <div class="text-4xl mb-4">&#127968;</div>
                     <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Life OS &mdash; Personal Command Center</h3>
@@ -371,6 +382,15 @@
             unique: 'Quick-capture inbox that eliminates friction. Progressive summarization workflow for distilling key insights. Reading list with status tracking and key takeaway fields. Two interconnected databases that surface relevant notes exactly when you need them.',
             link: '#'
         },
+        'personal-crm': {
+            emoji: '\u{1F91D}',
+            title: 'Personal CRM \u2014 Relationship Manager',
+            dbCount: 'Notion \u00B7 3 databases \u00B7 Free',
+            description: 'Your relationships are your most valuable asset. Track your entire personal and professional network with a Contacts database, Interaction Log, and Important Dates tracker. Never forget a follow-up, miss a birthday, or wonder "what did we talk about last time?" again.',
+            value: 'Relationships fade not because you don\u0027t care, but because you don\u0027t have a system. This template turns good intentions into consistent action. The Nth-order effect: following up consistently builds stronger relationships, which creates more opportunities, which compounds into a richer personal and professional life.',
+            unique: 'Circle-based contact tiers (Inner Circle to Distant) with recommended follow-up cadences. Interaction Log that serves as your relationship memory. Important Dates tracker for birthdays, anniversaries, and milestones. Built-in Relationship Playbook with follow-up frameworks, conversation starters, and monthly review checklists. Completely free \u2014 our gift to get you started with Nth-order thinking.',
+            link: '#'
+        },
         'life-os': {
             emoji: '\u{1F3E0}',
             title: 'Life OS \u2014 Personal Command Center',
@@ -392,7 +412,9 @@
         document.getElementById('modal-description').textContent = product.description;
         document.getElementById('modal-value').textContent = product.value;
         document.getElementById('modal-unique').textContent = product.unique;
-        document.getElementById('modal-cta').href = product.link;
+        const cta = document.getElementById('modal-cta');
+        cta.href = product.link;
+        cta.textContent = id === 'personal-crm' ? 'Get It Free' : 'Get This Template';
 
         const modal = document.getElementById('product-modal');
         modal.classList.remove('hidden');
