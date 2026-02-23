@@ -21,7 +21,7 @@ NOTION_VERSION = "2022-06-28"
 # ============================================================
 TEMPLATE_IMAGES = {
     "Habit Tracker Pro": {
-        "cover": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1500&h=600&fit=crop&crop=center",
+        "cover": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=1500&h=600&fit=crop&crop=center",
         "banner": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=400&fit=crop&crop=center",
         "icon": "\uD83C\uDFAF",
         "tagline": "Build lasting habits, one day at a time.",
